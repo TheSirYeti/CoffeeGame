@@ -24,5 +24,4 @@ namespace Camera.Behaviour
             playerBody.Rotate(Vector3.up * horizontalMovement); //We make the BODY rotate on X, not the camera
         }
     }
-
 }

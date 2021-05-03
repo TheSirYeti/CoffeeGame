@@ -13,6 +13,8 @@ namespace Player.Movement
         public Rigidbody playerBody;
         public float jumpForce;
         private ForceMode jumpForceMode = ForceMode.Impulse;
+
+        private bool isGrounded;
         
         public void move()
         {
@@ -26,7 +28,21 @@ namespace Player.Movement
 
         public void jump()
         {
-            playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);
+            if (isGrounded)
+            {
+                playerBody.velocity = Vector3.zero;
+                playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            isGrounded = true;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            isGrounded = false;
         }
     }
 }
