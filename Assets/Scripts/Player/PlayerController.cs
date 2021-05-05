@@ -9,7 +9,9 @@ namespace Player.Controller
     {
         public PlayerMovement movement;
         private string jumpButtonName = "Jump";
-
+        private string runningButtonNamespace = "Run";
+        public bool isJumping;
+        private float rampRayLength = 3f;
         private void FixedUpdate()
         {
             movement.move();
@@ -17,6 +19,18 @@ namespace Player.Controller
             {
                 movement.jump();
             }
+
+            if (Input.GetButtonDown(runningButtonNamespace))
+            {
+                movement.run();
+            }
+
+            if (Input.GetButtonUp(runningButtonNamespace))
+            {
+                movement.walk();
+            }
         }
+
+
     }
 }

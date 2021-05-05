@@ -10,12 +10,18 @@ namespace Player.Movement
         private string forwardMovementAxisNamespace = "Vertical";
 
         public float speed;
+        public float runningSpeed;
         public Rigidbody playerBody;
         public float jumpForce;
         private ForceMode jumpForceMode = ForceMode.Impulse;
-
+        private float finalSpeed;
         private bool isGrounded;
-        
+
+        private void Start()
+        {
+            finalSpeed = speed;
+        }
+
         public void move()
         {
             float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace);
@@ -23,7 +29,7 @@ namespace Player.Movement
 
             Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
 
-            playerBody.MovePosition(transform.position + totalMovement * (speed * Time.deltaTime));
+            playerBody.MovePosition(transform.position + totalMovement * (finalSpeed * Time.deltaTime));
         }
 
         public void jump()
@@ -33,6 +39,21 @@ namespace Player.Movement
                 playerBody.velocity = Vector3.zero;
                 playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);
             }
+        }
+
+        public void run()
+        {
+            finalSpeed = runningSpeed;
+        }
+
+        public void walk()
+        {
+            finalSpeed = speed;
+        }
+
+        public void moveDown()
+        {
+            playerBody.MovePosition(Vector3.down * transform.position.y * 100f * Time.deltaTime);
         }
 
         private void OnTriggerEnter(Collider other)
