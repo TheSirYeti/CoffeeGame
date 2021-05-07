@@ -9,6 +9,10 @@ namespace Player.Movement
         private string horizontalMovementAxisNamespace = "Horizontal";
         private string forwardMovementAxisNamespace = "Vertical";
 
+        public Animator animator;
+        private string runningSpeedParamenterName = "runningSpeed";
+        private string jumpTriggerParamenterName = "jump";
+        private string groundParamenterName = "isGrounded";
         public float speed;
         public float runningSpeed;
         public Rigidbody playerBody;
@@ -27,9 +31,13 @@ namespace Player.Movement
             float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace);
             float forwardMovement = Input.GetAxis(forwardMovementAxisNamespace);
 
-            Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
-
-            playerBody.MovePosition(transform.position + totalMovement * (finalSpeed * Time.deltaTime));
+            if (horizontalMovement != 0 || forwardMovement != 0)
+            {
+                Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
+                animator.SetFloat(runningSpeedParamenterName, 0.5f);
+                playerBody.MovePosition(transform.position + totalMovement * (finalSpeed * Time.deltaTime));
+            }
+            else animator.SetFloat(runningSpeedParamenterName, 0.2f);
         }
 
         public void jump()
@@ -44,6 +52,7 @@ namespace Player.Movement
         public void run()
         {
             finalSpeed = runningSpeed;
+            animator.SetFloat(runningSpeedParamenterName, 0.9f);
         }
 
         public void walk()
@@ -59,11 +68,13 @@ namespace Player.Movement
         private void OnTriggerEnter(Collider other)
         {
             isGrounded = true;
+            animator.SetBool(groundParamenterName, true);
         }
 
         private void OnTriggerExit(Collider other)
         {
             isGrounded = false;
+            animator.SetBool(groundParamenterName, false);
         }
     }
 }

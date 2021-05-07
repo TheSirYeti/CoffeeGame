@@ -8,6 +8,7 @@ namespace Player.Controller
     public class PlayerController : MonoBehaviour
     {
         public PlayerMovement movement;
+        public Animator animator;
         private string jumpButtonName = "Jump";
         private string runningButtonNamespace = "Run";
         public bool isJumping;
