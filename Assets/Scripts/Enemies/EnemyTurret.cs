@@ -10,6 +10,7 @@ public class EnemyTurret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform  firePoint;
 
+    public AudioSource mAudioSrc;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,12 @@ public class EnemyTurret : MonoBehaviour
         {
             Shoot();
             fireCountdown = 4.2f / fireRate;
+
+            mAudioSrc.Play();
         }
 
+        
+        
         fireCountdown -= Time.deltaTime; 
                 
     }
