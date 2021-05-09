@@ -23,6 +23,7 @@ namespace Player.Movement
         public      bool        stopMoving                          = false;
         private     Transform   target = null;
 
+        public      AudioSource mAudioSrc;
 
         private void Start()
         {
@@ -38,7 +39,8 @@ namespace Player.Movement
             {
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
                 animator.SetFloat(runningSpeedParamenterName, 0.5f);
-                playerBody.MovePosition(transform.position + totalMovement * (finalSpeed * Time.deltaTime));
+                transform.position += totalMovement * finalSpeed * Time.deltaTime;
+                
             }
             else animator.SetFloat(runningSpeedParamenterName, 0.2f);
         }
@@ -49,6 +51,7 @@ namespace Player.Movement
             {
                 playerBody.velocity = Vector3.zero;
                 playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);
+                mAudioSrc.Play();
             }
         }
 

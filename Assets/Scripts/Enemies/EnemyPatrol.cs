@@ -18,8 +18,10 @@ public class EnemyPatrol : MonoBehaviour
 
     private IEnumerator Patrol()
     {
-        for(int i = 0; i < waypoints.Length; i++)
+        while(true)
         {
+            for(int i = 0; i < waypoints.Length; i++)
+          {
             myAgent.SetDestination(waypoints[i].position);
 
             while(myAgent.pathPending)
@@ -31,7 +33,7 @@ public class EnemyPatrol : MonoBehaviour
             {
                 yield return null;
             }
+          }
         }
-        
     }
 }

@@ -31,9 +31,7 @@ public class PlatformMovement : MonoBehaviour
         }
         
         tolerance = speed * Time.deltaTime;
-
         
-
     }
 
     
@@ -92,4 +90,6 @@ public class PlatformMovement : MonoBehaviour
 
         current_target = points[point_number];
     }
+
+   
 }
