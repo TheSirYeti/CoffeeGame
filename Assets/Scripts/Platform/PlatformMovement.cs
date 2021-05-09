@@ -37,7 +37,7 @@ public class PlatformMovement : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         //Si no está en el target, la plataforma se va a mover.
         if (transform.position != current_target)
