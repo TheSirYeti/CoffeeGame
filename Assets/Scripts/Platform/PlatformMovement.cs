@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    //-6.66 a -0.69
-
+    
+    //Creamos un array de Vector3 publico que va a mostrar cuales son los puntos entre los que se tiene que mover la plataforma.
     public  Vector3[] points;
     public  int       point_number = 0;
-    private Vector3  current_target;
+    private Vector3   current_target;
 
-    public float tolerance;
-    public float speed;
-    public float delay_time;
+    
+    public float tolerance; //Tolerance lo vamos a usar para que la plataforma se mueva de manera limpia de punto en punto.
+    public float speed; //Speed va a indicar la velocidad en la que la plataforma se mueve.
+    public float delay_time; //Delay_Time va a ser utilizado para el delay que tiene entre movimientos la plataforma.
 
     private float delay_start;
 
-    public bool automatic;
+    public bool automatic; //automatic es para que las plataformas se muevan de manera automática.
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        //Si creamos puntos, la plataforma va a lockear el primero para que sea el destino
         if(points.Length > 0)
         {
          current_target = points[0];
@@ -33,13 +34,15 @@ public class PlatformMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
+        //Si no está en el target, la plataforma se va a mover.
         if (transform.position != current_target)
         {
             MovePlatform();
         }
+        //Y si lo está, le vamos a actualizar el target.
         else
         {
             UpdateTarget();
@@ -49,8 +52,11 @@ public class PlatformMovement : MonoBehaviour
 
     void MovePlatform()
     {
+        //Creamos un nuevo Vector3 para decirle a donde se dirige.
         Vector3 heading = current_target - transform.position;
         transform.position += (heading / heading.magnitude) * speed * Time.deltaTime;
+
+        //Generamos que la plataforma se ajuste perfecto al punto donde queremos.
         if(heading.magnitude < tolerance)
         {
             transform.position = current_target;
@@ -60,6 +66,7 @@ public class PlatformMovement : MonoBehaviour
 
     void UpdateTarget()
     {
+        //Si se mueve automaticamente, nos fijamos si necesita moverse la plataforma.
         if (automatic)
         {
             if(Time.time - delay_start > delay_time)
@@ -72,8 +79,10 @@ public class PlatformMovement : MonoBehaviour
 
     public void NextPlatform()
     {
+
         point_number++;
         
+        //Lo generamos por si no vamos a automatizar el movimiento.
         if (point_number >= points.Length)
         {
             point_number = 0;

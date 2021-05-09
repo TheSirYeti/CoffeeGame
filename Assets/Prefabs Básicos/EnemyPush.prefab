@@ -2472,11 +2472,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 98.32738
       objectReference: {fileID: 0}
+    - target: {fileID: 983436732622640963, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
+    - target: {fileID: 2548975374204314791, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
     - target: {fileID: 3613260423371780619, guid: 60feb0e4abf86c647ab00282d15193e2,
         type: 3}
       propertyPath: m_Name
       value: Escritorio (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5397396730537586377, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
+    - target: {fileID: 7376118404003933094, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
+    - target: {fileID: 7624069426132978837, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
+    - target: {fileID: 9044342276905362740, guid: 60feb0e4abf86c647ab00282d15193e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b93282176af30045b2a15697371c210, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60feb0e4abf86c647ab00282d15193e2, type: 3}
 --- !u!4 &748425190718804750 stripped

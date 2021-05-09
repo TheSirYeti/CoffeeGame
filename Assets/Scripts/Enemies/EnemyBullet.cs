@@ -11,7 +11,9 @@ public class EnemyBullet : MonoBehaviour
     {
         //cambiamos la posicion de la bullet para que esta se mueva hacia adelante
         transform.position += transform.forward * speed * Time.deltaTime; 
-              
+
+        Destroy(gameObject, 5f);
+
     }
 
     void OnCollisionEnter (Collision collision)
@@ -22,6 +24,7 @@ public class EnemyBullet : MonoBehaviour
             Death();
         }
     }
+
     void Death ()
     {
         Destroy(gameObject);
