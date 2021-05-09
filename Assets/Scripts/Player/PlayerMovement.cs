@@ -6,22 +6,20 @@ namespace Player.Movement
 {
     public class PlayerMovement : MonoBehaviour
     {
-        private     string      horizontalMovementAxisNamespace     = "Horizontal";
-        private     string      forwardMovementAxisNamespace        = "Vertical";
+        private string horizontalMovementAxisNamespace = "Horizontal";
+        private string forwardMovementAxisNamespace = "Vertical";
 
-        public      Animator    animator;
-        private     string      runningSpeedParamenterName          = "runningSpeed";
-        private     string      jumpTriggerParamenterName           = "jump";
-        private     string      groundParamenterName                = "isGrounded";
-        public      float       speed;
-        public      float       runningSpeed;
-        public      Rigidbody   playerBody;
-        public      float       jumpForce;
-        private     ForceMode   jumpForceMode                       = ForceMode.Impulse;
-        private     float       finalSpeed;
-        private     bool        isGrounded;
-        public      bool        stopMoving                          = false;
-
+        public Animator animator;
+        private string runningSpeedParamenterName = "runningSpeed";
+        private string jumpTriggerParamenterName = "jump";
+        private string groundParamenterName = "isGrounded";
+        public float speed;
+        public float runningSpeed;
+        public Rigidbody playerBody;
+        public float jumpForce;
+        private ForceMode jumpForceMode = ForceMode.Impulse;
+        private float finalSpeed;
+        private bool isGrounded;
 
         private void Start()
         {

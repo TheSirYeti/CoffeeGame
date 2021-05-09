@@ -1,43 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class WinLossManager : MonoBehaviour
 {
-    [SerializeField] List<GameObject> UIElements;
-    public GameObject winPanel, losePanel;
-    public FadeManager fadeManager;
-    public CursorState cursorState;
+    public GameObject conditionPanel;
+    public List<GameObject> otherUIElements;
 
-    public void disableUI()
+    void showConditionPanel()
     {
-        foreach (GameObject g in UIElements)
+        foreach(GameObject g in otherUIElements)
         {
             g.SetActive(false);
         }
-    }
 
-    public void lose()
-    {
-        StartCoroutine(setEndPanel(losePanel));
-    }
-
-    public void win()
-    {
-        StartCoroutine(setEndPanel(winPanel));
-    }
-
-    IEnumerator setEndPanel(GameObject panel)
-    {
-        fadeManager.fade();
-        yield return new WaitForSeconds(0.75f);
-        panel.SetActive(true);
-        cursorState.end();
-    }
-
-    public void loadNextScene(int id)
-    {
-        SceneManager.LoadScene(id);
+        conditionPanel.SetActive(true);
     }
 }
