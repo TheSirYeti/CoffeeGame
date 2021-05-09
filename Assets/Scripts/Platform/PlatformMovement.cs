@@ -18,6 +18,8 @@ public class PlatformMovement : MonoBehaviour
 
     public bool automatic;
 
+    private GameObject target = null;
+    private Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,7 @@ public class PlatformMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position != current_target)
         {
