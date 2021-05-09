@@ -5,13 +5,26 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
 
-    public  float speed;
+    public float  speed;
     
-    // Update is called once per frame
     void Update()
     {
-        
-        transform.position -= new Vector3 (transform.position.x, 0, transform.position.z) * speed * Time.deltaTime;
-        
+        //cambiamos la posicion de la bullet para que esta se mueva hacia adelante
+        transform.position += transform.forward * speed * Time.deltaTime; 
+              
     }
+
+    void OnCollisionEnter (Collision collision)
+    {
+        //En caso de que colisione con el jugador, esta sera destruida y le causara dano al mismo
+        if(collision.gameObject.tag.Equals("Player"))
+        {
+            Death();
+        }
+    }
+    void Death ()
+    {
+        Destroy(gameObject);
+    }
+    
 }
