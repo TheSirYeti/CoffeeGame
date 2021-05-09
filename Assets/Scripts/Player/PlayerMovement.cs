@@ -40,7 +40,10 @@ namespace Player.Movement
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
                 animator.SetFloat(runningSpeedParamenterName, 0.5f);
                 transform.position += totalMovement * finalSpeed * Time.deltaTime;
+<<<<<<< Updated upstream
                 
+=======
+>>>>>>> Stashed changes
             }
             else animator.SetFloat(runningSpeedParamenterName, 0.2f);
         }

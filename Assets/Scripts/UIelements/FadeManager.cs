@@ -9,6 +9,7 @@ public class FadeManager : MonoBehaviour
 
     public void fade()
     {
+        gameObject.SetActive(true);
         animator.SetTrigger("fadeOut");
     }
 }

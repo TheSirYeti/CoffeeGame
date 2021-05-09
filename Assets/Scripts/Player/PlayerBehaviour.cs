@@ -13,6 +13,9 @@ public abstract class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        takeDamage();
+        if (other.gameObject.tag == "Enemy")
+        {
+            takeDamage();
+        }
     }
 }
