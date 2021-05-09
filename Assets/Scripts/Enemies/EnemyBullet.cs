@@ -16,18 +16,13 @@ public class EnemyBullet : MonoBehaviour
 
     }
 
-    void OnCollisionEnter (Collision collision)
+    void OnTriggerEnter (Collision other)
     {
         //En caso de que colisione con el jugador, esta sera destruida y le causara dano al mismo
-        if(collision.gameObject.tag.Equals("Player"))
+        if(other.gameObject.tag.Equals("Player"))
         {
-            Death();
+            Destroy(gameObject);
         }
-    }
-
-    void Death ()
-    {
-        Destroy(gameObject);
     }
     
 }

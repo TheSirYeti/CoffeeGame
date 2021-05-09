@@ -6,6 +6,7 @@ public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
     
+
     public void takeDamage()
     {
         hp--;
@@ -15,6 +16,7 @@ public abstract class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            
             takeDamage();
         }
     }
