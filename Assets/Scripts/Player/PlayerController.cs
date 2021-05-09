@@ -7,30 +7,42 @@ namespace Player.Controller
 {
     public class PlayerController : PlayerBehaviour
     {
-        public PlayerMovement movement;
-        private string jumpButtonName = "Jump";
-        private string runningButtonNamespace = "Run";
-        public bool isJumping;
-        private float rampRayLength = 3f;
+        public      PlayerMovement      movement;
+        private     string              jumpButtonName              = "Jump";
+        private     string              runningButtonNamespace      = "Run";
+        public      bool                isJumping;
+        private     float               rampRayLength               = 3f;
         private void FixedUpdate()
         {
-            movement.move();
-            if (Input.GetButtonDown(jumpButtonName))
-            {
-                movement.jump();
-            }
-
-            if (Input.GetButtonDown(runningButtonNamespace))
-            {
-                movement.run();
-            }
-
-            if (Input.GetButtonUp(runningButtonNamespace))
-            {
-                movement.walk();
-            }
+            checkMove();
+            checkJump();
+            checkRunning();
         }
 
+        public void stopMovement()
+        {
+            movement.stopMoving = true;
+        }
 
+        void checkMove()
+        {
+            if (!movement.stopMoving)
+                movement.move();
+        }
+
+        void checkJump()
+        {
+            if (Input.GetButtonDown(jumpButtonName))
+                movement.jump();
+        }
+
+        void checkRunning()
+        {
+            if (Input.GetButtonDown(runningButtonNamespace))
+                movement.run();
+
+            if (Input.GetButtonUp(runningButtonNamespace))
+                movement.walk();
+        }
     }
 }
