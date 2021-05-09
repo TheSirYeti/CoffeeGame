@@ -21,6 +21,7 @@ namespace Player.Movement
         private     float       finalSpeed;
         private     bool        isGrounded;
         public      bool        stopMoving                          = false;
+        private     Transform   target = null;
 
 
         private void Start()
@@ -71,12 +72,22 @@ namespace Player.Movement
         {
             isGrounded = true;
             animator.SetBool(groundParamenterName, true);
+
+            if (other.gameObject.tag == "Escritorio")
+            {
+                transform.parent = other.transform;
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
             isGrounded = false;
             animator.SetBool(groundParamenterName, false);
+
+            if (other.gameObject.tag == "Escritorio")
+            {
+                transform.parent = null;
+            }
         }
     }
 }
