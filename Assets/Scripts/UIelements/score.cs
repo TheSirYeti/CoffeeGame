@@ -10,16 +10,16 @@ public class score : MonoBehaviour
 
     public void setScore(float points)
     {
-        totalTally += points;
+        totalTally += points;       //Adds the value to the total
     }
 
     public float getScore()
     {
-        return totalTally;
+        return totalTally;          //Returns the total score
     }
 
     private void Update()
     {
-        scoreText.text = "Score: " + totalTally;
+        scoreText.text = "Score: " + totalTally;        //Sets the UI text with the current score
     }
 }

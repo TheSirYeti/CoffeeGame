@@ -12,7 +12,7 @@ namespace Player.Controller
         private     string              runningButtonNamespace      = "Run";
         public      bool                isJumping;
         private     float               rampRayLength               = 3f;
-        private void FixedUpdate()
+        private void Update()
         {
             checkMove();
             checkJump();
@@ -21,27 +21,27 @@ namespace Player.Controller
 
         public void stopMovement()
         {
-            movement.stopMoving = true;
+            movement.stopMoving = true;     //Tells the body to stop moving
         }
 
         void checkMove()
         {
-            if (!movement.stopMoving)
+            if (!movement.stopMoving)   //If it isn't told to stop, keeps on moving
                 movement.move();
         }
 
         void checkJump()
         {
-            if (Input.GetButtonDown(jumpButtonName))
+            if (Input.GetButtonDown(jumpButtonName))        //If the player hits the jump button, it jumps
                 movement.jump();
         }
 
         void checkRunning()
         {
-            if (Input.GetButtonDown(runningButtonNamespace))
+            if (Input.GetButtonDown(runningButtonNamespace))    // If the player hits the run button, it runs
                 movement.run();
 
-            if (Input.GetButtonUp(runningButtonNamespace))
+            if (Input.GetButtonUp(runningButtonNamespace))  // If the player lets go of the run button, it stops running
                 movement.walk();
         }
     }

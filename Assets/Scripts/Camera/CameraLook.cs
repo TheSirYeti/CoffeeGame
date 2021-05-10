@@ -6,7 +6,7 @@ namespace Camera.Behaviour
 {
     public class CameraLook : MonoBehaviour
     {
-        public float mouseSensitivity;
+        public float mouseSensitivity = 1000f;
         private string horizontalMovementAxisNamespace = "Mouse X";
         private string verticalMovementAxisNamespace = "Mouse Y";
         private float totalRotation = 0f;        //We use this as the parameter we send to the Player's Transform component

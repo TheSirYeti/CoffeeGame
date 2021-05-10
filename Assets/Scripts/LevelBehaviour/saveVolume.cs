@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class saveVolume : MonoBehaviour
 {
     public float volume;
-    public Slider slider;
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);      //We dont destroy this object so that the sound volume is lowered in the upcoming levels.
     }
 
-    private void Update()
+    public void setVolume(float value)
     {
-        volume = slider.value;
+        volume = value;             //Saves the volume value
     }
 }

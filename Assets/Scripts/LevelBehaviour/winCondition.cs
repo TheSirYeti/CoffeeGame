@@ -10,7 +10,7 @@ public class winCondition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")               //If we collide with the coffee machine, we win the level
         {
             other.GetComponent<PlayerController>().stopMovement();
             winLossManager.disableUI();

@@ -11,8 +11,8 @@ public class timeRemaining : MonoBehaviour
     private void Update()
     {
         if (levelTime > 0f)
-            levelTime -= Time.deltaTime;
-        else levelTime = 0f;
+            levelTime -= Time.deltaTime;        //If there's still time, keep counting down
+        else levelTime = 0f;                    
 
         showTime(levelTime);
     }
@@ -24,10 +24,10 @@ public class timeRemaining : MonoBehaviour
             time = 0;
         }
 
-        float minutes = Mathf.FloorToInt(time / 60);
-        float seconds = Mathf.FloorToInt(time % 60);
+        float minutes = Mathf.FloorToInt(time / 60);        //We divide by 60 to get the total minutes remaining
+        float seconds = Mathf.FloorToInt(time % 60);        //We do the module calculation to get the amount of seconds it the minute
 
-        timeUI.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timeUI.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);    //We show the current time in the MINUTES:SECONDS format
     }
 
     public float getTimeRemaining()

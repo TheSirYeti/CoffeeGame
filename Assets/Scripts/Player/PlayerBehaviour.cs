@@ -10,14 +10,14 @@ public abstract class PlayerBehaviour : MonoBehaviour
 
     public void takeDamage()
     {
-        hp--;
+        hp--;       //Loses an HP point
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")        //If it collides with an enemy, it takes damage.
         {
-            damageSound.Play();
+            damageSound.Play(); //Plays a sound effect
             takeDamage();
         }
     }

@@ -9,18 +9,19 @@ public class volumeManager : MonoBehaviour
 
     void Start()
     {
-        sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-        GameObject g = GameObject.FindWithTag("volume");
-        volume = g.GetComponent<saveVolume>().volume;
+        sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];       //We get all the current sounds in the scene
+        GameObject g = GameObject.FindWithTag("volume");                                    //We get the volume configuration
+        if (g == null)                                      //If there's no volume configuration, we delete the object
+            Destroy(gameObject);
     }
 
     private void Update()
     {
         GameObject g = GameObject.FindWithTag("volume");
-        volume = g.GetComponent<saveVolume>().volume;
+        volume = g.GetComponent<saveVolume>().volume;   //Sets the value 
         foreach (AudioSource a in sources)
-        {
-            a.volume = volume;
+        {             
+            a.volume = volume; //We lower the volume of all the clips.
         }
     }
 }

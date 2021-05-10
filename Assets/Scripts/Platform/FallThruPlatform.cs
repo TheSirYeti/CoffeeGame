@@ -23,13 +23,13 @@ public class FallThruPlatform : MonoBehaviour
         if (collider.enabled)
         {
             Color c = gameObject.GetComponent<Renderer>().material.color;
-            c.a = 1f;
+            c.a = 1f;   //If we can jump on the platform, the object isn't transparent
             gameObject.GetComponent<Renderer>().material.color = c;
         }
         else
         {
             Color c = gameObject.GetComponent<Renderer>().material.color;
-            c.a = 0.5f;
+            c.a = 0.15f;    //If we cant jump on the platform, we make the object hard to see
             gameObject.GetComponent<Renderer>().material.color = c;
         }
     }
@@ -37,7 +37,7 @@ public class FallThruPlatform : MonoBehaviour
     IEnumerator togglePlatform()
     {
         yield return new WaitForSeconds(timeToToggle);
-        collider.enabled = !collider.enabled;
+        collider.enabled = !collider.enabled;   //Every X amount of seconds, we turn on/off the platform's collisions
         StartCoroutine(togglePlatform());
     }
 }

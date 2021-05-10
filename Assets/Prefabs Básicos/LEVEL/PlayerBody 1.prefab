@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  damageSound: {fileID: 0}
   movement: {fileID: 292218101392414502}
   isJumping: 0
 --- !u!114 &292218101392414502
@@ -502,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f587a6a8c7a8b4bb04a20a3d51c428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 120
+  mouseSensitivity: 500
   playerBody: {fileID: 292218101392414506}
 --- !u!82 &7040166909735287393
 AudioSource:

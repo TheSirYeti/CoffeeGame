@@ -8,11 +8,11 @@ public class popUpBehaviour : MonoBehaviour
 
     public void close()
     {
-        panel.SetActive(false);
+        panel.SetActive(false);     //Hides the panel
     }
 
     public void open()
     {
-        panel.SetActive(true);
+        panel.SetActive(true);      //Shows the panel
     }
 }

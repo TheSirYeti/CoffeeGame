@@ -11,17 +11,14 @@ public class EnemyTurret : MonoBehaviour
     public Transform  firePoint;
 
     public AudioSource mAudioSrc;
-
-    
-    // Update is called once per frame
     void Update()
     {
-        if(fireCountdown <= 0f)
+        if(fireCountdown <= 0f)     //If it's allowed to fire, it fires
         {
             Shoot();
             fireCountdown = 4.2f / fireRate;
 
-            mAudioSrc.Play();
+            mAudioSrc.Play();       //Plays a sound effect
         }
 
         
@@ -32,6 +29,6 @@ public class EnemyTurret : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);     //Instantiates the bullet on the desired position
     }
 }

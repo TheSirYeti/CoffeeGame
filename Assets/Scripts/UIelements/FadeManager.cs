@@ -10,6 +10,6 @@ public class FadeManager : MonoBehaviour
     public void fade()
     {
         gameObject.SetActive(true);
-        animator.SetTrigger("fadeOut");
+        animator.SetTrigger("fadeOut");     //Sets a parameter which fades the screen to black
     }
 }

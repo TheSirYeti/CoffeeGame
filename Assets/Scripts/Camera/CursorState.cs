@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CursorState : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;   //Locks and hides the cursor
         Cursor.visible = false;
     }
 
     public void end()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;    //Shows the cursor and unlocks it
         Cursor.visible = true;
     }
 }

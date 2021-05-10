@@ -12,6 +12,6 @@ public struct CoffeeCup
 
     public float totalScore()
     {
-        return scoreValue * multiplier;
+        return scoreValue * multiplier; //We multiply the score with the multiplier to get the total score
     }
 }

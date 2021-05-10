@@ -10,12 +10,13 @@ public class colliderTarget : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            player.transform.parent = transform;
+            player.transform.parent = transform;        //This makes the player move with the platform and be able to
+                                                        //move on its own
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player.transform.parent = null;
+        player.transform.parent = null;             //We make it independant again
     }
 }

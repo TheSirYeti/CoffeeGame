@@ -9,7 +9,7 @@ public class CollectCups : MonoBehaviour
     public score score;
     public PlayerController player;
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Rotate(0f, 0f, 3f);
     }
@@ -18,8 +18,8 @@ public class CollectCups : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            player.movement.animator.SetTrigger("ThumbsUp");
-            score.setScore(cup.totalScore());
+            player.movement.animator.SetTrigger("ThumbsUp");        //If the player collides with the cup, the animation plays
+            score.setScore(cup.totalScore());       //Adds the score to the UI
             Destroy(gameObject);
         }
     }

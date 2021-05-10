@@ -16,7 +16,8 @@ public class EnemyBullet : MonoBehaviour
 
     }
 
-    void OnTriggerEnter (Collision other)
+    
+    void OnTriggerEnter(Collider other)
     {
         //En caso de que colisione con el jugador, esta sera destruida y le causara dano al mismo
         if(other.gameObject.tag.Equals("Player"))
