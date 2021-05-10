@@ -6,6 +6,8 @@ public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
 
+    public AudioSource damageSound;
+
     public void takeDamage()
     {
         hp--;
@@ -15,7 +17,7 @@ public abstract class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            
+            damageSound.Play();
             takeDamage();
         }
     }
