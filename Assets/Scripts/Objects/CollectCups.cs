@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player.Controller;
 
 public class CollectCups : MonoBehaviour
 {
     public CoffeeCup cup;
     public score score;
+    public PlayerController player;
 
     private void Update()
     {
@@ -16,6 +18,7 @@ public class CollectCups : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            player.movement.animator.SetTrigger("ThumbsUp");
             score.setScore(cup.totalScore());
             Destroy(gameObject);
         }

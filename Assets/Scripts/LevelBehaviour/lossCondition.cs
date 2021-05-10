@@ -11,7 +11,7 @@ public class lossCondition : MonoBehaviour
 
     private void Update()
     {
-        if (player.transform.position.y <= -10f || timer.getTimeRemaining() == 0)
+        if (player.transform.position.y <= -10f || timer.getTimeRemaining() == 0 || player.hp <= 0)
         {
             player.stopMovement();
             winLossManager.disableUI();

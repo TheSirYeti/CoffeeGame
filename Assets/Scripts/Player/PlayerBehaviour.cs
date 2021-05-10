@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
-    
 
     public void takeDamage()
     {

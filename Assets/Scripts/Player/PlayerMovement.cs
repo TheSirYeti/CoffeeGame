@@ -40,7 +40,6 @@ namespace Player.Movement
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement;
                 animator.SetFloat(runningSpeedParamenterName, 0.5f);
                 transform.position += totalMovement * finalSpeed * Time.deltaTime;
-
             }
             else animator.SetFloat(runningSpeedParamenterName, 0.2f);
         }
@@ -71,26 +70,16 @@ namespace Player.Movement
             playerBody.MovePosition(Vector3.down * transform.position.y * 100f * Time.deltaTime);
         }
 
-        private void OnTriggerEnter(Collider other)
+        public void onGround()
         {
             isGrounded = true;
             animator.SetBool(groundParamenterName, true);
-
-            if (other.gameObject.tag == "Escritorio")
-            {
-                transform.parent = other.transform;
-            }
         }
 
-        private void OnTriggerExit(Collider other)
+        public void onAir()
         {
             isGrounded = false;
             animator.SetBool(groundParamenterName, false);
-
-            if (other.gameObject.tag == "Escritorio")
-            {
-                transform.parent = null;
-            }
         }
     }
 }

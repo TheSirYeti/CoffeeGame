@@ -9,11 +9,28 @@ public class GroundControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.isJumping = false;
+        player.movement.onGround();
+        if (other.gameObject.tag == "Escritorio")
+        {
+            player.transform.parent = other.transform;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        player.movement.onGround();
+        if (other.gameObject.tag == "Escritorio")
+        {
+            player.transform.parent = other.transform;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player.isJumping = true;
+        player.movement.onAir();
+        if (other.gameObject.tag == "Escritorio")
+        {
+            player.transform.parent = null;
+        }
     }
 }
