@@ -21,8 +21,6 @@ namespace Player.Movement
         private     bool        isGrounded;
         public      bool        stopMoving                          = false;
 
-        public      AudioSource mAudioSrc;
-
         private void Start()
         {
             finalSpeed = speed;     
@@ -47,8 +45,8 @@ namespace Player.Movement
             if (isGrounded)
             {
                 playerBody.velocity = Vector3.zero;     //We reset the player's momentum
-                playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode); //Adds a upward force which makes it jump
-                mAudioSrc.Play();   //Plays a sound effect
+                playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);     //Adds a upward force which makes it jump
+                SoundManager.instance.PlaySound(SoundID.JUMP);  //Plays a sound effect
             }
         }
 

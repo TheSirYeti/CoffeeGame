@@ -18,13 +18,10 @@ public class EnemyTurret : MonoBehaviour
             Shoot();
             fireCountdown = 4.2f / fireRate;
 
-            mAudioSrc.Play();       //Plays a sound effect
+            SoundManager.instance.PlaySound(SoundID.PAPER_BALL);       //Plays a sound effect
         }
 
-        
-        
-        fireCountdown -= Time.deltaTime; 
-                
+        fireCountdown -= Time.deltaTime;
     }
 
     void Shoot()

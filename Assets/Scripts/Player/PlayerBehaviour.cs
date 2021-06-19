@@ -17,7 +17,7 @@ public abstract class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")        //If it collides with an enemy, it takes damage.
         {
-            damageSound.Play(); //Plays a sound effect
+            SoundManager.instance.PlaySound(SoundID.TAKEDAMAGE);    //Plays a sound effect
             takeDamage();
         }
     }

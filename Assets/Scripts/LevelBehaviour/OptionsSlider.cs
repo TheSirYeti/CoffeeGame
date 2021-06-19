@@ -5,12 +5,22 @@ using UnityEngine.UI;
 
 public class OptionsSlider : MonoBehaviour
 {
-    public Slider slider;
-    public saveVolume volume;
+    public Slider sfxSlider;
+    public Slider musicSlider;
 
-    private void Update()
+    private void Start()
     {
-        volume.volume = slider.value;       //Sets the value of the volume.
+        sfxSlider.value = SoundManager.instance.volumeSFX;
+        musicSlider.value = SoundManager.instance.volumeMusic;
     }
 
+    public void SetVolumeSFX()
+    {
+        SoundManager.instance.ChangeVolumeSound(sfxSlider.value);
+    }
+
+    public void SetVolumeMusic()
+    {
+        SoundManager.instance.ChangeVolumeMusic(musicSlider.value);
+    }
 }

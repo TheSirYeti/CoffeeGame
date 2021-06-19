@@ -44,5 +44,15 @@ namespace Player.Controller
             if (Input.GetButtonUp(runningButtonNamespace))  // If the player lets go of the run button, it stops running
                 movement.walk();
         }
+
+        public void ThumbsUP()
+        {
+            movement.animator.SetTrigger("ThumbsUp");
+        }
+
+        public void playSFX()
+        {
+            SoundManager.instance.PlaySound(SoundID.NICE);
+        }
     }
 }

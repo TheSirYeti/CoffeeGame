@@ -20,8 +20,12 @@ public class volumeManager : MonoBehaviour
         GameObject g = GameObject.FindWithTag("volume");
         volume = g.GetComponent<saveVolume>().volume;   //Sets the value 
         foreach (AudioSource a in sources)
-        {             
-            a.volume = volume; //We lower the volume of all the clips.
+        {
+            if(a.gameObject.tag != "Music")
+            {
+                a.volume = volume; //We lower the volume of all the clips.
+            }
+            
         }
     }
 }
