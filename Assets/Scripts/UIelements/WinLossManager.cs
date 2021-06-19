@@ -43,11 +43,7 @@ public class WinLossManager : MonoBehaviour
     }
 
     public void loadNextScene(int id)
-    {
-        if (id == (int)SceneID.MAINMENU)        //If the player returns to the Main Menu, it destroys the music playing
-            Destroy(music);
-        else
-            DontDestroyOnLoad(music);           //Else, we keep playing the same music
+    {        
         SceneManager.LoadScene(id);
     }
 

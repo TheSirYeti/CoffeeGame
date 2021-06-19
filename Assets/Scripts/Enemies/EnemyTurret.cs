@@ -9,8 +9,6 @@ public class EnemyTurret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform  firePoint;
-
-    public AudioSource mAudioSrc;
     void Update()
     {
         if(fireCountdown <= 0f)     //If it's allowed to fire, it fires

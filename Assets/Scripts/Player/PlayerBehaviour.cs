@@ -6,8 +6,6 @@ public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
 
-    public AudioSource damageSound;
-
     public void takeDamage()
     {
         hp--;       //Loses an HP point

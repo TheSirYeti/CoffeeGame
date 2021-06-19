@@ -12,6 +12,7 @@ namespace Player.Controller
         private     string              runningButtonNamespace      = "Run";
         public      bool                isJumping;
         private     float               rampRayLength               = 3f;
+        public      Animator            animator;
         private void Update()
         {
             checkMove();
@@ -47,7 +48,7 @@ namespace Player.Controller
 
         public void ThumbsUP()
         {
-            movement.animator.SetTrigger("ThumbsUp");
+            animator.SetTrigger("ThumbsUp");
         }
 
         public void playSFX()
