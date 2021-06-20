@@ -563,10 +563,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  bulletPrefab: {fileID: 7834472683425152230, guid: 44644aa55fc7d10449bc8a648a4756fa,
+  bulletPrefab: {fileID: 1988158701224391178, guid: ebe11b1e07d923d43a287b1117cf155e,
     type: 3}
   firePoint: {fileID: 7037256784862783229}
-  mAudioSrc: {fileID: 0}
 --- !u!1 &1346857845822352398
 GameObject:
   m_ObjectHideFlags: 0

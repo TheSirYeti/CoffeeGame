@@ -12,6 +12,8 @@ public class EnemyBullet : MonoBehaviour
         //cambiamos la posicion de la bullet para que esta se mueva hacia adelante
         transform.position += transform.forward * speed * Time.deltaTime; 
 
+        transform.Rotate(new Vector3(0f, 0f, 5f));
+
         Destroy(gameObject, 5f);
 
     }
