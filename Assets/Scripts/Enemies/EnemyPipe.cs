@@ -17,14 +17,14 @@ public class EnemyPipe : MonoBehaviour
         {
             Fire.SetActive(true);
 
-            Invoke("SetFalse", 6);
+            Invoke("SetFalse", 4);
             
         }
         else
         {
             Fire.SetActive(false);
 
-            Invoke("SetTrue", 6);
+            Invoke("SetTrue", 4);
         }
     }
 

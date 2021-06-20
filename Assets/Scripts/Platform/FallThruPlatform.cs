@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallThruPlatform : MonoBehaviour
 {
     [SerializeField] Collider collider;
+    public Material originalMat;
+    public Material emissiveMat;
 
     public float timeToToggle;
 
@@ -22,15 +24,11 @@ public class FallThruPlatform : MonoBehaviour
     {
         if (collider.enabled)
         {
-            Color c = gameObject.GetComponent<Renderer>().material.color;
-            c.a = 1f;   //If we can jump on the platform, the object isn't transparent
-            gameObject.GetComponent<Renderer>().material.color = c;
+            gameObject.GetComponent<Renderer>().material = emissiveMat;
         }
         else
         {
-            Color c = gameObject.GetComponent<Renderer>().material.color;
-            c.a = 0.15f;    //If we cant jump on the platform, we make the object hard to see
-            gameObject.GetComponent<Renderer>().material.color = c;
+            gameObject.GetComponent<Renderer>().material = originalMat;
         }
     }
 
