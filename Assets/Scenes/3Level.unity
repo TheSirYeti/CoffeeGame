@@ -1456,7 +1456,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-38788
+  m_Name: pb_Mesh-52904
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4498,7 +4498,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28956
+  m_Name: pb_Mesh33354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8444,7 +8444,7 @@ PrefabInstance:
     - target: {fileID: 5919544736881588845, guid: ceafd45ee26aa51468a771256aec3394,
         type: 3}
       propertyPath: mouseSensitivity
-      value: 200
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5919544737052869534, guid: ceafd45ee26aa51468a771256aec3394,
         type: 3}
@@ -8903,6 +8903,46 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1561759512}
+    - target: {fileID: 2069530866, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530866, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Size.z
+      value: 8.096991
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530866, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Center.x
+      value: 0.75609404
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530866, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Center.z
+      value: 1.0484936
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530866, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Size.x
+      value: 3.501402
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530871, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530871, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Size.z
+      value: 8.116766
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530871, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Center.x
+      value: 0.7601114
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530871, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Center.z
+      value: 1.0583813
+      objectReference: {fileID: 0}
+    - target: {fileID: 2069530871, guid: 7115090cf334a2144bfbc15b323e2724, type: 3}
+      propertyPath: m_Size.x
+      value: 3.5094366
+      objectReference: {fileID: 0}
     - target: {fileID: 1326410674143633573, guid: 7115090cf334a2144bfbc15b323e2724,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9586,7 +9626,7 @@ BoxCollider:
   m_GameObject: {fileID: 1774756168}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 3.5228708, y: 1.0150394, z: 8.099642}
   m_Center: {x: 0.7668284, y: 0.5075197, z: 1.049819}
@@ -9599,7 +9639,7 @@ BoxCollider:
   m_GameObject: {fileID: 1774756168}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 3.5059407, y: 2.108698, z: 8.078135}
   m_Center: {x: 0.75836337, y: 1.054349, z: 1.0390654}

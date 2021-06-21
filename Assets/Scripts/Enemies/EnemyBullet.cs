@@ -7,7 +7,7 @@ public class EnemyBullet : MonoBehaviour
 
     public float  speed;
     
-    void Update()
+    void FixedUpdate()
     {
         //cambiamos la posicion de la bullet para que esta se mueva hacia adelante
         transform.position += transform.forward * speed * Time.deltaTime; 

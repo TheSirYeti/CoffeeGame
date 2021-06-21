@@ -13,7 +13,7 @@ namespace Camera.Behaviour
 
         public Transform playerBody;
         
-        void FixedUpdate()
+        void Update()
         {
             float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace) * mouseSensitivity;      //We get the mouse horizontal input
             float verticalMovement = Input.GetAxis(verticalMovementAxisNamespace) * mouseSensitivity;          //We get the mouse vertical input * Time.deltaTime
