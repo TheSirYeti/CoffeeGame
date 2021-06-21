@@ -186,7 +186,8 @@ public enum SoundID
     TAKEDAMAGE,
     NICE,
     PAPER_BALL,
-    ROLLING_CART
+    ROLLING_CART,
+    FLAME
 }
 
 public enum MusicID

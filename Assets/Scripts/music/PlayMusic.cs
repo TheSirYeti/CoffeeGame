@@ -8,7 +8,7 @@ public class PlayMusic : MonoBehaviour
     {
         if (!SoundManager.instance.isMusicPlaying(MusicID.MAINSONG))
         {
-            SoundManager.instance.PlayMusic(MusicID.MAINSONG);
+            SoundManager.instance.PlayMusic(MusicID.MAINSONG, true);
         }
     }
 }

@@ -42,12 +42,14 @@ public class WinLossManager : MonoBehaviour
         cursorState.end();
     }
 
-    public void loadNextScene(SceneID id)
+    public void loadNextScene(int id)
     {
-        if (id == SceneID.MAINMENU)
+        if (id == (int)SceneID.MAINMENU)
             SoundManager.instance.StopMusic(MusicID.MAINSONG);
 
-        SceneManager.LoadScene((int)id);
+
+        SoundManager.instance.StopAllSounds();
+        SceneManager.LoadScene(id);
     }
 
     public enum SceneID

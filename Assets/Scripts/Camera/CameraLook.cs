@@ -15,8 +15,8 @@ namespace Camera.Behaviour
         
         void FixedUpdate()
         {
-            float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace) * mouseSensitivity * Time.deltaTime;      //We get the mouse horizontal input
-            float verticalMovement = Input.GetAxis(verticalMovementAxisNamespace) * mouseSensitivity * Time.deltaTime;          //We get the mouse vertical input
+            float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace) * mouseSensitivity;      //We get the mouse horizontal input
+            float verticalMovement = Input.GetAxis(verticalMovementAxisNamespace) * mouseSensitivity;          //We get the mouse vertical input * Time.deltaTime
 
             totalRotation -= verticalMovement; //We use this parameter to determine the Y movement in the camera
             totalRotation = Mathf.Clamp(totalRotation, -90f, 90f); //With this the user cannot rotate beyond the body's head or toes

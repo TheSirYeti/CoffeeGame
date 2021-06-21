@@ -16,14 +16,13 @@ public class EnemyPipe : MonoBehaviour
         if(isActive == true)
         {
             Fire.SetActive(true);
-
-            Invoke("SetFalse", 4);
+            Invoke("SetFalse", 3);
             
         }
         else
         {
             Fire.SetActive(false);
-
+            SoundManager.instance.PlaySound(SoundID.FLAME);
             Invoke("SetTrue", 4);
         }
     }

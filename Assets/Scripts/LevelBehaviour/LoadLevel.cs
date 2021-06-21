@@ -14,8 +14,11 @@ public class LoadLevel : MonoBehaviour
 
     public IEnumerator loadLevel(int scene)
     {
+        
         fadeManager.fade();                 //Fades the screen to black
         yield return new WaitForSeconds(0.75f);
+        SoundManager.instance.StopAllMusic();
+        SoundManager.instance.StopAllSounds();
         SceneManager.LoadScene(scene);      //Loads the scene
     }
 
