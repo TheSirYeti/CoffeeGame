@@ -32,4 +32,10 @@ public class showHP : MonoBehaviour
             hearts.RemoveAt(hearts.Count - 1);
         }
     }
+
+    public void removeHP()
+    {
+        Destroy(hearts[hearts.Count - 1]);      //we remove the last one from the list
+        hearts.RemoveAt(hearts.Count - 1);
+    }
 }
