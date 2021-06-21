@@ -5071,7 +5071,7 @@ PrefabInstance:
     - target: {fileID: 25465651523194590, guid: 1d515b5eb6c0d9a48b4dc7a4d09009e5,
         type: 3}
       propertyPath: levelTime
-      value: 90
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 25465651523194590, guid: 1d515b5eb6c0d9a48b4dc7a4d09009e5,
         type: 3}
@@ -8441,6 +8441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1918579002346878757, guid: ceafd45ee26aa51468a771256aec3394,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5919544736881588845, guid: ceafd45ee26aa51468a771256aec3394,
         type: 3}
       propertyPath: mouseSensitivity

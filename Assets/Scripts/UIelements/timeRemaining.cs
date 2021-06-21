@@ -27,6 +27,8 @@ public class timeRemaining : MonoBehaviour
         float minutes = Mathf.FloorToInt(time / 60);        //We divide by 60 to get the total minutes remaining
         float seconds = Mathf.FloorToInt(time % 60);        //We do the module calculation to get the amount of seconds it the minute
 
+        if (time <= 15)
+            timeUI.color = Color.red;
         timeUI.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);    //We show the current time in the MINUTES:SECONDS format
     }
 

@@ -19,9 +19,6 @@ public class PlatformMovement : MonoBehaviour
 
     public bool automatic; //automatic es para que las plataformas se muevan de manera automática.
 
-    private GameObject target = null;
-    private Vector3 offset;
-
     void Start()
     {
         //Si creamos puntos, la plataforma va a lockear el primero para que sea el destino

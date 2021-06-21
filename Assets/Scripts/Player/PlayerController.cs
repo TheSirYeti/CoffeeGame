@@ -11,7 +11,6 @@ namespace Player.Controller
         private     string              jumpButtonName              = "Jump";
         private     string              runningButtonNamespace      = "Run";
         public      bool                isJumping;
-        private     float               rampRayLength               = 3f;
         public      Animator            animator;
         private void Update()
         {

@@ -16,7 +16,7 @@ public class showHP : MonoBehaviour
         for (int i = 0; i < player.hp; i++)    
         {
             GameObject heart = Instantiate(heartImage);     //We create a new heart
-            heart.transform.parent = transform;
+            heart.transform.SetParent(transform);
             if (i != 0)
                 heart.transform.position = hearts[i - 1].transform.position + new Vector3(xOffset, 0f, 0f);     //We set the correct position in the Canvas
             else heart.transform.position = transform.position;
