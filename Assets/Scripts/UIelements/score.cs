@@ -8,18 +8,29 @@ public class score : MonoBehaviour
     float totalTally;
     public Text scoreText;
 
-    public void setScore(float points)
+    private void Start()
+    {
+        EventManager.Subscribe("AddCup", UpdateText);
+        EventManager.Subscribe("AddScore", CupCollected);
+    }
+
+    public void SetScore(float points)
     {
         totalTally += points;       //Adds the value to the total
     }
 
-    public float getScore()
+    public float GetScore()
     {
         return totalTally;          //Returns the total score
     }
 
-    private void Update()
-    {
+    public void UpdateText(object[] parameters)
+    { 
         scoreText.text = "Score: " + totalTally;        //Sets the UI text with the current score
+    }
+
+    public void CupCollected(object[] parameters)
+    {
+        SetScore((float)parameters[0]);
     }
 }

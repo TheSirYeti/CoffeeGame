@@ -18,9 +18,8 @@ public class CollectCups : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            player.ThumbsUP();        //If the player collides with the cup, the animation plays
-            SoundManager.instance.PlaySound(SoundID.NICE);
-            score.setScore(cup.totalScore());       //Adds the score to the UI
+            EventManager.Trigger("AddScore", cup.scoreValue);
+            EventManager.Trigger("AddCup");
             Destroy(gameObject);
         }
     }

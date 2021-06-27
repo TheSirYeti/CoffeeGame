@@ -17,6 +17,16 @@ namespace Player.Controller
         public      Animator            animator;
         public      Action              artificialUpdate;
 
+        private void Awake()
+        {
+            EventManager.resetEventDictionary();
+        }
+
+        private void Start()
+        {
+            EventManager.Subscribe("AddCup", CupCollected);
+        }
+
         public PlayerController(PlayerMovement playerMovement)
         {
             movement = playerMovement;
@@ -83,9 +93,15 @@ namespace Player.Controller
             animator.SetTrigger("ThumbsUp");
         }
 
-        public void playSFX()
+        public void PlaySFX()
         {
             SoundManager.instance.PlaySound(SoundID.NICE);
+        }
+
+        private void CupCollected(object[] parameter)
+        {
+            ThumbsUP();
+            PlaySFX();
         }
     }
 }
