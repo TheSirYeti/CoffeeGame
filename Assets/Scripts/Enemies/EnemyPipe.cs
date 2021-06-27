@@ -6,34 +6,24 @@ public class EnemyPipe : MonoBehaviour
 {
     public GameObject Fire;
     public bool isActive;
+    public float activeTime = 3;
+    public float inactiveTime = 4;
 
-
-     
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if(isActive == true)
-        {
-            Fire.SetActive(true);
-            Invoke("SetFalse", 3);
-            
-        }
-        else
-        {
-            Fire.SetActive(false);
-            SoundManager.instance.PlaySound(SoundID.FLAME);
-            Invoke("SetTrue", 4);
-        }
-    }
+        Invoke("SetTrue", inactiveTime);
+    } 
 
     public void SetTrue()
     {
-        isActive = true;
+        Fire.SetActive(true);
+        SoundManager.instance.PlaySound(SoundID.FLAME);
+        Invoke("SetFalse", activeTime);
     }
 
     public void SetFalse()
     {
-        isActive = false;
+        Fire.SetActive(false);
+        Invoke("SetTrue", inactiveTime);
     }
 }
