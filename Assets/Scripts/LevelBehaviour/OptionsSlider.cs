@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//TP2 - Rshaid, Juan Pablo
 public class OptionsSlider : MonoBehaviour
 {
     public Slider sfxSlider;

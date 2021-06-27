@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//TP2 - Rshaid, Juan Pablo
 public class LoadLevel : MonoBehaviour
 {
     public FadeManager fadeManager;

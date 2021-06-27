@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//TP2 - Juan Cruz Cristófalo
 public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField]

@@ -6,6 +6,8 @@ using System;
 using Player.Movement;
 using Camera.Behaviour;
 
+//TP2 - Rshaid, Juan Pablo
+
 namespace Player.Controller
 {
     public class PlayerController : PlayerBehaviour

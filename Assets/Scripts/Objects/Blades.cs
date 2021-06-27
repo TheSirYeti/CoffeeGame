@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP2 - Rshaid, Juan Pablo
 public class Blades : MonoBehaviour
 {
     public Vector3 rotationValues;

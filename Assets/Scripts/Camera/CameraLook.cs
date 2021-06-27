@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP2 - Rshaid, Juan Pablo
+
+
 namespace Camera.Behaviour
 {
     public class CameraLook : MonoBehaviour

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP2 - Rshaid, Juan Pablo
+
 public class popUpBehaviour : MonoBehaviour
 {
     public GameObject panel;

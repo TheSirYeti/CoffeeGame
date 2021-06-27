@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player.Controller;
 
+//TP2 - Rshaid, Juan Pablo
+
 namespace Player.Movement
 {
     public class PlayerMovement : MonoBehaviour

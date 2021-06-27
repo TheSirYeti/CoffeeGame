@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP2 - Rshaid, Juan Pablo
 public static class EventManager
 {
     public delegate void EventReceiver(params object[] parameter);

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//TP2 - Juan Cruz Cristófalo
 public class PlatformMovement : MonoBehaviour
 {
     

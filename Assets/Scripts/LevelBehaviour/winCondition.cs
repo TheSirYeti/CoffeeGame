@@ -4,6 +4,7 @@ using UnityEngine;
 using Player.Controller;
 using Player.Movement;
 
+//TP2 - Rshaid, Juan Pablo
 public class winCondition : MonoBehaviour
 {
     public WinLossManager winLossManager;
