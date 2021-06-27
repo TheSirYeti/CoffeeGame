@@ -8,34 +8,24 @@ public class FallThruPlatform : MonoBehaviour
     public Material originalMat;
     public Material emissiveMat;
 
-    public float timeToToggle;
+    public float timeActive;
+    public float timeOff;
 
     private void Start()
     {
         StartCoroutine(togglePlatform());
     }
 
-    private void Update()
-    {
-        changeVisibility();
-    }
-
-    public void changeVisibility()
-    {
-        if (collider.enabled)
-        {
-            gameObject.GetComponent<Renderer>().material = emissiveMat;
-        }
-        else
-        {
-            gameObject.GetComponent<Renderer>().material = originalMat;
-        }
-    }
-
     IEnumerator togglePlatform()
     {
-        yield return new WaitForSeconds(timeToToggle);
-        collider.enabled = !collider.enabled;   //Every X amount of seconds, we turn on/off the platform's collisions
-        StartCoroutine(togglePlatform());
+        while (true)
+        {
+            collider.enabled = true;                                        //Every X amount of seconds, we turn on/off the platform's collisions
+            gameObject.GetComponent<Renderer>().material = emissiveMat;
+            yield return new WaitForSeconds(timeActive);
+            collider.enabled = false;
+            gameObject.GetComponent<Renderer>().material = originalMat;
+            yield return new WaitForSeconds(timeOff);
+        }
     }
 }

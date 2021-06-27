@@ -823,7 +823,7 @@ PrefabInstance:
     - target: {fileID: 120938746192268971, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadNextScene
+      value: LoadNextScene
       objectReference: {fileID: 0}
     - target: {fileID: 120938746192268971, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -983,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 120938746933616034, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadNextScene
+      value: LoadNextScene
       objectReference: {fileID: 0}
     - target: {fileID: 120938746933616034, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -1010,7 +1010,7 @@ PrefabInstance:
     - target: {fileID: 120938747720504005, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadNextScene
+      value: LoadNextScene
       objectReference: {fileID: 0}
     - target: {fileID: 120938747720504005, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -1025,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: 120938747826102549, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadNextScene
+      value: LoadNextScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e67de5d2d242ea40acd13d56b3686b2, type: 3}

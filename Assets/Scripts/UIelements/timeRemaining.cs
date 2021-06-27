@@ -14,14 +14,15 @@ public class timeRemaining : MonoBehaviour
             levelTime -= Time.deltaTime;        //If there's still time, keep counting down
         else levelTime = 0f;                    
 
-        showTime(levelTime);
+        ShowTime(levelTime);
     }
 
-    void showTime(float time)
+    void ShowTime(float time)
     {
         if(time < 0)
         {
             time = 0;
+            EventManager.Trigger("Lose");
         }
 
         float minutes = Mathf.FloorToInt(time / 60);        //We divide by 60 to get the total minutes remaining
@@ -32,7 +33,7 @@ public class timeRemaining : MonoBehaviour
         timeUI.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);    //We show the current time in the MINUTES:SECONDS format
     }
 
-    public float getTimeRemaining()
+    public float GetTimeRemaining()
     {
         return levelTime;
     }

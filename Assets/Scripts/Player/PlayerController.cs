@@ -25,6 +25,9 @@ namespace Player.Controller
         private void Start()
         {
             EventManager.Subscribe("AddCup", CupCollected);
+            EventManager.Subscribe("Lose", StopMovement);
+            EventManager.Subscribe("Win", StopMovement);
+            artificialUpdate = CheckInputs;
         }
 
         public PlayerController(PlayerMovement playerMovement)
@@ -32,30 +35,33 @@ namespace Player.Controller
             movement = playerMovement;
             artificialUpdate = CheckInputs;
         }
-        
+
         public void OnUpdate()
         {
             artificialUpdate();
         }
 
-        public void StopMovement()
+        public void StopMovement(object[] parameter)
         {
-            movement.stopMoving = true;     //Tells the body to stop moving
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            
+            movement.stopMoving = true;                             //Tells the body to stop moving
         }
 
         void CheckInputs()
         {
-            if (!movement.stopMoving)   //If it isn't told to stop, keeps on moving
-                movement.move();
+            if (!movement.stopMoving)                               //If it isn't told to stop, keeps on moving
+                movement.Move();
 
-            if (Input.GetButtonDown(jumpButtonName))        //If the player hits the jump button, it jumps
-                movement.jump();
+            if (Input.GetButtonDown(jumpButtonName))                //If the player hits the jump button, it jumps
+                movement.Jump();
 
-            if (Input.GetButtonDown(runningButtonNamespace))    // If the player hits the run button, it runs
-                movement.run();
+            if (Input.GetButtonDown(runningButtonNamespace))        // If the player hits the run button, it runs
+                movement.Run();
 
-            if (Input.GetButtonUp(runningButtonNamespace))  // If the player lets go of the run button, it stops running
-                movement.walk();
+            if (Input.GetButtonUp(runningButtonNamespace))          // If the player lets go of the run button, it stops running
+                movement.Walk();
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -86,6 +92,11 @@ namespace Player.Controller
                 artificialUpdate = CheckInputs;
                 Time.timeScale = 1f;
             }
+        }
+
+        void NoMovement() 
+        {
+            movement.stopMoving = true;
         }
 
         public void ThumbsUP()

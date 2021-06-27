@@ -356,4 +356,5 @@ MonoBehaviour:
   collider: {fileID: 9088884192852216365}
   originalMat: {fileID: 2100000, guid: 0978e2f17c3e76d4dbbb47b7e8ba12fe, type: 2}
   emissiveMat: {fileID: 2100000, guid: 22f23270b353e5f41be0a39e172196e9, type: 2}
-  timeToToggle: 4
+  timeActive: 4
+  timeOff: 2

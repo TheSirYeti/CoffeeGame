@@ -6,9 +6,16 @@ public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
 
-    public void takeDamage()
+    public void TakeDamage()
     {
         hp--;       //Loses an HP point
+        EventManager.Trigger("LoseLife");
+    }
+
+    private void Update()
+    {
+        if (hp <= 0)
+            EventManager.Trigger("Lose");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -16,7 +23,7 @@ public abstract class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Enemy")        //If it collides with an enemy, it takes damage.
         {
             SoundManager.instance.PlaySound(SoundID.TAKEDAMAGE);    //Plays a sound effect
-            takeDamage();
+            TakeDamage();
         }
     }
 }

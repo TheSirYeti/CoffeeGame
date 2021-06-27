@@ -9,7 +9,7 @@ public class GroundControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.movement.onGround();
+        player.movement.OnGround();
         if (other.gameObject.tag == "Escritorio")       //If the player is standing on a desk
         {
             player.transform.parent = other.transform;  //We make the player depend on the other colission's movement
@@ -18,7 +18,7 @@ public class GroundControl : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        player.movement.onGround();    //We tell the Player that it's on the ground
+        player.movement.OnGround();    //We tell the Player that it's on the ground
         if (other.gameObject.tag == "Escritorio")
         {
             player.transform.parent = other.transform;  //We make the player depend on the other colission's movement
@@ -27,7 +27,7 @@ public class GroundControl : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        player.movement.onAir();    //We tell the Player it's on the air.
+        player.movement.OnAir();    //We tell the Player it's on the air.
         if (other.gameObject.tag == "Escritorio")       
         {
             player.transform.parent = null;//We make the player independant

@@ -13,10 +13,12 @@ public class WinLossManager : MonoBehaviour
 
     private void Start()
     {
-        music = GameObject.FindWithTag("Music");        //Gets the object that's playing music
+        EventManager.Subscribe("Lose", DisableUI);
+        EventManager.Subscribe("Lose", Lose);
+        EventManager.Subscribe("Win", Win);
     }
 
-    public void disableUI()
+    public void DisableUI(object[] parameters)
     {
         foreach (GameObject g in UIElements)
         {
@@ -24,17 +26,17 @@ public class WinLossManager : MonoBehaviour
         }
     }
 
-    public void lose()
+    public void Lose(object[] parameters)
     {
-        StartCoroutine(setEndPanel(losePanel));
+        StartCoroutine(SetEndPanel(losePanel));
     }
 
-    public void win()
+    public void Win(object[] parameters)
     {
-        StartCoroutine(setEndPanel(winPanel));
+        StartCoroutine(SetEndPanel(winPanel));
     }
 
-    IEnumerator setEndPanel(GameObject panel)
+    IEnumerator SetEndPanel(GameObject panel)
     {
         fadeManager.fade();
         yield return new WaitForSeconds(0.75f);
@@ -42,13 +44,14 @@ public class WinLossManager : MonoBehaviour
         cursorState.end();
     }
 
-    public void loadNextScene(int id)
+    public void LoadNextScene(int id)
     {
         if (id == (int)SceneID.MAINMENU)
             SoundManager.instance.StopMusic(MusicID.MAINSONG);
 
 
         SoundManager.instance.StopAllSounds();
+        EventManager.resetEventDictionary();
         SceneManager.LoadScene(id);
     }
 

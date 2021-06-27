@@ -22,18 +22,11 @@ public class showHP : MonoBehaviour
             else heart.transform.position = transform.position;
             hearts.Add(heart);  //We add it to the List
         }
+
+        EventManager.Subscribe("LoseLife", removeHP);
     }
 
-    private void Update()
-    {
-        if(player.hp < hearts.Count)
-        {
-            Destroy(hearts[hearts.Count - 1]);      //If the List has more objects than current lives, we remove the last one from the list
-            hearts.RemoveAt(hearts.Count - 1);
-        }
-    }
-
-    public void removeHP()
+    public void removeHP(object[] parameters)
     {
         Destroy(hearts[hearts.Count - 1]);      //we remove the last one from the list
         hearts.RemoveAt(hearts.Count - 1);

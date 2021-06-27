@@ -302,6 +302,9 @@ MonoBehaviour:
   playerBody: {fileID: 5919544737052869524}
   jumpForce: 6
   stopMoving: 0
+  yDeathHeight: -10
+  pausePanel: {fileID: 0}
+  fpsCamera: {fileID: 0}
 --- !u!1 &5919544737159512395
 GameObject:
   m_ObjectHideFlags: 0

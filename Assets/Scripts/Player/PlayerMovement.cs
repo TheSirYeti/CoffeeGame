@@ -21,6 +21,7 @@ namespace Player.Movement
         private     float       finalSpeed;
         private     bool        isGrounded;
         public      bool        stopMoving                          = false;
+        public float yDeathHeight;
         PlayerController _controller;
         public GameObject pausePanel;
         public GameObject fpsCamera;
@@ -34,9 +35,12 @@ namespace Player.Movement
         private void Update()
         {
             _controller.OnUpdate();
+
+            if (transform.position.y <= yDeathHeight)
+                EventManager.Trigger("Lose");
         }
 
-        public void move()
+        public void Move()
         {
             float horizontalMovement = Input.GetAxis(horizontalMovementAxisNamespace);      //We get the horizontal axis value
             float forwardMovement = Input.GetAxis(forwardMovementAxisNamespace);            //We get the vertical axis value
@@ -50,7 +54,7 @@ namespace Player.Movement
             else animator.SetFloat(runningSpeedParameterName, 0.2f);    //Sets the blend tree's value
         }
 
-        public void jump()
+        public void Jump()
         {
             if (isGrounded)
             {
@@ -60,24 +64,24 @@ namespace Player.Movement
             }
         }
 
-        public void run()
+        public void Run()
         {
             finalSpeed = runningSpeed;  //Makes the moving speed faster
             animator.SetFloat(runningSpeedParameterName, 0.9f); //Sets the blend tree's value
         }
 
-        public void walk()
+        public void Walk()
         {
             finalSpeed = speed;     //Makes the speed slower
         }
 
-        public void onGround()
+        public void OnGround()
         {
             isGrounded = true;             
             animator.SetBool(groundParameterName, true);    //Sets the animator parameter
         }
 
-        public void onAir()
+        public void OnAir()
         {
             isGrounded = false;
             animator.SetBool(groundParameterName, false);   //Sets the animator parameter
