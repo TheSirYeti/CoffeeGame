@@ -1877,6 +1877,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &473615141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4362730566535744253, guid: 4e67de5d2d242ea40acd13d56b3686b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 473615131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &486588499
 GameObject:
   m_ObjectHideFlags: 0
@@ -8561,6 +8567,16 @@ PrefabInstance:
       propertyPath: mouseSensitivity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5919544737052869523, guid: ceafd45ee26aa51468a771256aec3394,
+        type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 6208309133829274494}
+    - target: {fileID: 5919544737052869523, guid: ceafd45ee26aa51468a771256aec3394,
+        type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 473615141}
     - target: {fileID: 5919544737052869534, guid: ceafd45ee26aa51468a771256aec3394,
         type: 3}
       propertyPath: m_Name
@@ -8623,6 +8639,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceafd45ee26aa51468a771256aec3394, type: 3}
+--- !u!1 &6208309133829274494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5919544736881588841, guid: ceafd45ee26aa51468a771256aec3394,
+    type: 3}
+  m_PrefabInstance: {fileID: 6208309133829274493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9088884193638135391
 PrefabInstance:
   m_ObjectHideFlags: 0

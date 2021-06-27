@@ -15,7 +15,7 @@ public class lossCondition : MonoBehaviour
                                                                                                     //runs out of time,
                                                                                                     //or runs out of lives, they lose.
         {
-            player.stopMovement();              //The player stops recieving 
+            player.StopMovement();              //The player stops recieving 
             winLossManager.disableUI();         //Hides the UI
             winLossManager.lose();              //Shows the Lose Panel
         }

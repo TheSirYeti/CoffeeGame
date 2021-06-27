@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Player.Controller;
 
 namespace Player.Movement
 {
@@ -20,10 +21,19 @@ namespace Player.Movement
         private     float       finalSpeed;
         private     bool        isGrounded;
         public      bool        stopMoving                          = false;
+        PlayerController _controller;
+        public GameObject pausePanel;
+        public GameObject fpsCamera;
 
         private void Start()
         {
-            finalSpeed = speed;     
+            finalSpeed = speed;
+            _controller = new PlayerController(this);
+        }
+
+        private void Update()
+        {
+            _controller.OnUpdate();
         }
 
         public void move()
