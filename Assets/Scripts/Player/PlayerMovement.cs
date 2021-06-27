@@ -30,6 +30,8 @@ namespace Player.Movement
         {
             finalSpeed = speed;
             _controller = new PlayerController(this);
+            EventManager.Subscribe("Jumping", OnAir);
+            EventManager.Subscribe("Landing", OnGround);
         }
 
         private void Update()
@@ -75,13 +77,13 @@ namespace Player.Movement
             finalSpeed = speed;     //Makes the speed slower
         }
 
-        public void OnGround()
+        public void OnGround(object[] parameters)
         {
             isGrounded = true;             
             animator.SetBool(groundParameterName, true);    //Sets the animator parameter
         }
 
-        public void OnAir()
+        public void OnAir(object[] parameters)
         {
             isGrounded = false;
             animator.SetBool(groundParameterName, false);   //Sets the animator parameter

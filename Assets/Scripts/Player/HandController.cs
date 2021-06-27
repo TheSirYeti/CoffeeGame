@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeirdWall : MonoBehaviour
+public class HandController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -10,9 +10,13 @@ public class WeirdWall : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Jumping()
     {
-        
+        EventManager.Trigger("Jumping");
+    }
+
+    public void Landing()
+    {
+        EventManager.Trigger("Landing");
     }
 }

@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class EnemyTurret : MonoBehaviour
 {
-    
-
     public GameObject bulletPrefab;
     public Transform  firePoint;
-    void Update()
-    {
-    
-    }
 
     void Shoot()
     {
