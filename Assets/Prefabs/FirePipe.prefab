@@ -525,6 +525,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fire: {fileID: 4548187315829502287}
   isActive: 1
+  activeTime: 3
+  inactiveTime: 4
 --- !u!1 &7036120676615196805
 GameObject:
   m_ObjectHideFlags: 0

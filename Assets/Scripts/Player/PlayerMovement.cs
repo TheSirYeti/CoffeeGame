@@ -53,7 +53,8 @@ namespace Player.Movement
             {
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement; //gets the correct orientation
                 animator.SetFloat(runningSpeedParameterName, 0.5f); //Sets the blend tree's value
-                transform.position += totalMovement * finalSpeed * Time.deltaTime; //moves the player
+                playerBody.MovePosition(transform.position + totalMovement * finalSpeed * Time.deltaTime);
+                //transform.position += totalMovement * finalSpeed * Time.deltaTime; //moves the player
             }
             else animator.SetFloat(runningSpeedParameterName, 0.2f);    //Sets the blend tree's value
         }
