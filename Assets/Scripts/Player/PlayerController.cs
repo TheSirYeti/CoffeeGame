@@ -75,6 +75,7 @@ namespace Player.Controller
                 SoundManager.instance.PlayMusic(MusicID.ELEVATOR, true);
                 movement.pausePanel.SetActive(true);
                 movement.fpsCamera.GetComponent<CameraLook>().enabled = false;
+                movement.fpsCamera2.GetComponent<CameraLook>().enabled = false;
                 artificialUpdate = PausedMenu;
                 Time.timeScale = 0f;
             }
@@ -91,6 +92,7 @@ namespace Player.Controller
                 SoundManager.instance.StopMusic(MusicID.ELEVATOR);
                 movement.pausePanel.SetActive(false);
                 movement.fpsCamera.GetComponent<CameraLook>().enabled = true;
+                movement.fpsCamera2.GetComponent<CameraLook>().enabled = true;
                 artificialUpdate = CheckInputs;
                 Time.timeScale = 1f;
             }

@@ -27,6 +27,7 @@ namespace Player.Movement
         PlayerController _controller;
         public GameObject pausePanel;
         public GameObject fpsCamera;
+        public GameObject fpsCamera2;
 
         private void Start()
         {
