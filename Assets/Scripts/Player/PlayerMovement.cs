@@ -23,6 +23,7 @@ namespace Player.Movement
         private     float       finalSpeed;
         private     bool        isGrounded;
         public      bool        stopMoving                          = false;
+        float speedMultiplier = 1;
         public float yDeathHeight;
         PlayerController _controller;
         public GameObject pausePanel;
@@ -35,6 +36,8 @@ namespace Player.Movement
             _controller = new PlayerController(this);
             EventManager.Subscribe("Jumping", OnAir);
             EventManager.Subscribe("Landing", OnGround);
+            EventManager.Subscribe("JumpBoost", JumpBoost);
+            EventManager.Subscribe("SpeedBoost", SpeedBoost);
         }
 
         private void Update()
@@ -54,7 +57,7 @@ namespace Player.Movement
             {
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement; //gets the correct orientation
                 animator.SetFloat(runningSpeedParameterName, 0.5f); //Sets the blend tree's value
-                playerBody.MovePosition(transform.position + totalMovement * finalSpeed * Time.deltaTime);
+                playerBody.MovePosition(transform.position + totalMovement * finalSpeed * Time.deltaTime * speedMultiplier);
                 //transform.position += totalMovement * finalSpeed * Time.deltaTime; //moves the player
             }
             else animator.SetFloat(runningSpeedParameterName, 0.2f);    //Sets the blend tree's value
@@ -91,6 +94,16 @@ namespace Player.Movement
         {
             isGrounded = false;
             animator.SetBool(groundParameterName, false);   //Sets the animator parameter
+        }
+
+        public void JumpBoost(object[] parameters)
+        {
+            jumpForce = (float)parameters[0];
+        }
+
+        public void SpeedBoost(object[] parameters)
+        {
+            speedMultiplier = (float)parameters[0];
         }
     }
 }
