@@ -8,7 +8,8 @@ public class PowerUpClock : MonoBehaviour
     public float totalTime;
     public float time;
     public Image uiElement;
-    public PowerUp.PowerType type;
+
+    public PowerUp.PowerType powerUp;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class PowerUpClock : MonoBehaviour
 
     public void StartCounter(object[] parameters)
     {
-        if (type == (PowerUp.PowerType)parameters[1])
+        if (powerUp == (PowerUp.PowerType)parameters[1])
         {
             time = (float)parameters[0];
             totalTime = (float)parameters[0];
@@ -42,6 +43,15 @@ public class PowerUpClock : MonoBehaviour
     public void StopCounter(object[] parameters)
     {
         uiElement.enabled = false;
+        switch (powerUp)
+        {
+            case PowerUp.PowerType.JUMP_BOOST:
+                EventManager.Trigger("JumpBoost", 6f);
+                break;
+            case PowerUp.PowerType.SPEED_BOOST:
+                EventManager.Trigger("SpeedBoost", 1f);
+                break;
+        }
     }
 
 }

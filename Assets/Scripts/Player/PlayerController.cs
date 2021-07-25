@@ -85,8 +85,8 @@ namespace Player.Controller
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 SoundManager.instance.ResumeAllMusic();
                 SoundManager.instance.ResumeAllSounds();
                 SoundManager.instance.StopMusic(MusicID.ELEVATOR);

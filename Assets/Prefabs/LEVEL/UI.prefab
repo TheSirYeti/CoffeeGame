@@ -1960,7 +1960,7 @@ MonoBehaviour:
   totalTime: 0
   time: 0
   uiElement: {fileID: 5328815204704141677}
-  type: 1
+  powerUp: 1
 --- !u!1 &1649431436633503411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2123,7 @@ MonoBehaviour:
   totalTime: 0
   time: 0
   uiElement: {fileID: 25650490642081701}
-  type: 0
+  powerUp: 0
 --- !u!1 &2659002243491830094
 GameObject:
   m_ObjectHideFlags: 0
