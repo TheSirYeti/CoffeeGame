@@ -40,7 +40,7 @@ public class WinLossManager : MonoBehaviour
     IEnumerator SetEndPanel(GameObject panel)
     {
         fadeManager.fade();
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1.1f);
         panel.SetActive(true);
         cursorState.end();
     }

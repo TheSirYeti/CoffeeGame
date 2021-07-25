@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class DialogueManager : MonoBehaviour
     bool isSentenceOver;
     string currentSentence;
     public Animator animator;
+
+    public FadeManager fade;
+    public int sceneToLoad;
+
     private void Start()
     {
         currentSentence = sentences[currentIndex];
@@ -39,7 +44,7 @@ public class DialogueManager : MonoBehaviour
             currentIndex++;
             if (currentIndex >= sentences.Length)
             {
-                Destroy(gameObject);
+                StartCoroutine(EndCutscene());
             } else
             {
                 currentSentence = sentences[currentIndex];
@@ -67,5 +72,12 @@ public class DialogueManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    IEnumerator EndCutscene()
+    {
+        fade.fade();
+        yield return new WaitForSeconds(1.1f);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

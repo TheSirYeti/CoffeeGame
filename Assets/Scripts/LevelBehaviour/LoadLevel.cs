@@ -17,10 +17,15 @@ public class LoadLevel : MonoBehaviour
     {
         
         fadeManager.fade();                 //Fades the screen to black
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.1f);
         SoundManager.instance.StopAllMusic();
         SoundManager.instance.StopAllSounds();
         SceneManager.LoadScene(scene);      //Loads the scene
+    }
+
+    public void DirectLoad(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 
     public void quit()
