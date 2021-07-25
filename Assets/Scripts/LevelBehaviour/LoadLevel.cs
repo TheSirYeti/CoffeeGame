@@ -17,7 +17,7 @@ public class LoadLevel : MonoBehaviour
     {
         
         fadeManager.fade();                 //Fades the screen to black
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1f);
         SoundManager.instance.StopAllMusic();
         SoundManager.instance.StopAllSounds();
         SceneManager.LoadScene(scene);      //Loads the scene
