@@ -20,13 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4Level.unity
     guid: baadbb7c9a1654249807af9801b04daa
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Cutscene.unity
+    path: Assets/Scenes/Cutscenes/Cutscene.unity
     guid: 6808ba05af5559647a1b87e269e2e403
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/LevelDialogue1.unity
+    guid: 99204ac9780941848aeb37f1a1341d2a
   m_configObjects: {}
