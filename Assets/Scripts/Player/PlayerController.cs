@@ -29,6 +29,10 @@ namespace Player.Controller
             EventManager.Subscribe("AddCup", CupCollected);
             EventManager.Subscribe("Lose", StopMovement);
             EventManager.Subscribe("Win", StopMovement);
+            EventManager.UnSubscribe("EnableShield", ActivateShield);
+            EventManager.UnSubscribe("DisableShield", DisableShield);
+            EventManager.Subscribe("EnableShield", ActivateShield);
+            EventManager.Subscribe("DisableShield", DisableShield);
             artificialUpdate = CheckInputs;
         }
 

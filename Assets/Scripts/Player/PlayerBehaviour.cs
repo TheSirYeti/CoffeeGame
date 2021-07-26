@@ -6,11 +6,20 @@ using UnityEngine;
 public abstract class PlayerBehaviour : MonoBehaviour
 {
     public float hp;
+    public bool shield;
+
+    private void Awake()
+    {
+
+    }
 
     public void TakeDamage()
     {
-        hp--;       //Loses an HP point
-        EventManager.Trigger("LoseLife");
+        if (!shield)
+        {
+            hp--;       //Loses an HP point
+            EventManager.Trigger("LoseLife");
+        }
     }
 
     private void Update()
@@ -26,5 +35,17 @@ public abstract class PlayerBehaviour : MonoBehaviour
             SoundManager.instance.PlaySound(SoundID.TAKEDAMAGE);    //Plays a sound effect
             TakeDamage();
         }
+    }
+
+    public void ActivateShield(object[] parameters)
+    {
+        shield = true;
+        Debug.Log("ACTIVADO");
+    }
+
+    public void DisableShield(object[] parameters)
+    {
+        shield = false;
+        Debug.Log("DESACTIVADO");
     }
 }

@@ -27,7 +27,8 @@ public abstract class PowerUp : MonoBehaviour
     public enum PowerType
     {
         JUMP_BOOST,
-        SPEED_BOOST
+        SPEED_BOOST,
+        SHIELD_BOOST
     }
 
     public void Hide()

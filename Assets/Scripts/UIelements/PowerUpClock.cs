@@ -37,7 +37,6 @@ public class PowerUpClock : MonoBehaviour
             totalTime = (float)parameters[0];
             uiElement.enabled = true;
         }
-        else Debug.Log("Nope");
     }
 
     public void StopCounter(object[] parameters)
@@ -50,6 +49,9 @@ public class PowerUpClock : MonoBehaviour
                 break;
             case PowerUp.PowerType.SPEED_BOOST:
                 EventManager.Trigger("SpeedBoost", 1f);
+                break;
+            case PowerUp.PowerType.SHIELD_BOOST:
+                EventManager.Trigger("DisableShield");
                 break;
         }
     }
