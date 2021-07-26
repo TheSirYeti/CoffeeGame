@@ -988,8 +988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1800109872}
   sentences:
-  - Howdy!
-  - It seems that you found some of the special coffees!
+  - You're doing great so far!
+  - 'Our boys are so '
   - They give you special temporal abilites that can help you get to the coffee machine
     easier!
   - I still don't understand how they work...
