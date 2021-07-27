@@ -988,12 +988,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1800109872}
   sentences:
-  - Hey! Great job so far. this coffee you're getting is top notch!
-  - However, we might need some more to get the whole fill of the team
-  - Be careful with this next zone, it has some weird tech we still haven't worked
-    with
-  - '...See ya!'
-  animationPerSentence: 02000000010000000000000002000000
+  - I'm glad that I have you on speed-dial, you know?
+  - This next zone is a high-tech development zone, the're some pretty weird stuff
+    going on.
+  - BUT! there's some really really good coffee here. Probably the best around
+  - '...you know what to do'
+  - boss out
+  animationPerSentence: 0200000001000000000000000400000004000000
   characterSpeed: 0.01
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}

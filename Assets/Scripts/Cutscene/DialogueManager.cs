@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     public Text dialogueBox;
     public string[] sentences;
-    public int[] animationPerSentence;
+    public AnimationStyle[] animationPerSentence;
     int currentIndex = 0;
     public float characterSpeed;
 
@@ -53,20 +53,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void PlayAnimator(int animationID)
+    void PlayAnimator(AnimationStyle style)
     {
-        switch (animationID)
+        switch (style)
         {
-            case 1:
+            case AnimationStyle.NOD:
                 animator.Play("Nod");
                 break;
-            case 2:
+            case AnimationStyle.IDK:
                 animator.Play("Idk");
                 break;
-            case 3:
+            case AnimationStyle.WAVE:
                 animator.Play("Wave");
                 break;
-            case 4:
+            case AnimationStyle.THUMBSUP:
                 animator.Play("ThumbsUp");
                 break;
             default:
@@ -79,5 +79,14 @@ public class DialogueManager : MonoBehaviour
         fade.fade();
         yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene(sceneToLoad);
+    }
+
+    public enum AnimationStyle
+    {
+        NOD,
+        IDK,
+        WAVE,
+        THUMBSUP,
+        NONE
     }
 }

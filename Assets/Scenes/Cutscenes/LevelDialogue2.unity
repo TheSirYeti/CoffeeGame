@@ -995,7 +995,7 @@ MonoBehaviour:
   - I still don't understand how they work...
   - But I am glad that we have them at disposal.
   - You'll find some more nearby this zone.
-  animationPerSentence: 030000000000000002000000010000000200000000000000
+  animationPerSentence: 020000000000000004000000010000000000000004000000
   characterSpeed: 0.01
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}

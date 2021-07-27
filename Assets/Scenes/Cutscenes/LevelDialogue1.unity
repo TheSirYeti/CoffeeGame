@@ -994,7 +994,7 @@ MonoBehaviour:
   - Some platforms seem to have a collision problem. make sure to get your timings
     right!. Also, watch out for the rioters, crazy guys
   - Anyways, boss out!
-  animationPerSentence: 03000000000000000100000003000000
+  animationPerSentence: 02000000040000000100000000000000
   characterSpeed: 0.01
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}
