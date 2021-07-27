@@ -526,7 +526,6 @@ GameObject:
   - component: {fileID: 779644806}
   - component: {fileID: 779644805}
   - component: {fileID: 779644804}
-  - component: {fileID: 779644807}
   - component: {fileID: 779644808}
   m_Layer: 0
   m_Name: Main Camera
@@ -600,18 +599,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &779644807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779644803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5353c8adaae1bf4438b599eb05dbe719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &779644808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,15 +723,17 @@ MonoBehaviour:
     is pretty steep... there's a catch, actually
   - You see, there aren't any coffee shops or supermarkets nearby... it's actually
     hard to cross by. and we have lost a couple of workers due to this
-  - coffee is ussually found in some pretty dangerous and... weird places. But we
-    will give you any sort of gear in order to make sure that you make it there safe
-    and sound!
+  - coffee is ussually found in some pretty dangerous and... weird places... And in
+    the dark, there was no budget to buy lamps. But we will give you any sort of gear
+    in order to make sure that you make it there safe and sound!
   - Well, enough talk. our guys are thirsty and could use a cup of joe right about
     now.
   - Go get some coffee! we know you can do it!
   - Good luck!
   animationPerSentence: 0200000004000000000000000400000000000000040000000100000004000000000000000300000002000000
   characterSpeed: 0.01
+  background: {fileID: 1116297266}
+  extraText: {fileID: 1275900278}
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}
   sceneToLoad: 1

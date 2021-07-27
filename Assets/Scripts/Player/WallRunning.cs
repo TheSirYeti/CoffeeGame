@@ -21,8 +21,8 @@ public class WallRunning : MonoBehaviour
 
     void CheckForWalls()
     {
-        isWallRight = Physics.Raycast(transform.position, orientation.right, 2f, wallLayer);
-        isWallLeft = Physics.Raycast(transform.position, -orientation.right, 2f, wallLayer);
+        isWallRight = Physics.Raycast(transform.position, orientation.right, 3f, wallLayer);
+        isWallLeft = Physics.Raycast(transform.position, -orientation.right, 3f, wallLayer);
 
         if (Input.GetKeyDown(KeyCode.D) && isWallRight) StartWallRun();
         if (Input.GetKeyDown(KeyCode.A) && isWallLeft) StartWallRun();

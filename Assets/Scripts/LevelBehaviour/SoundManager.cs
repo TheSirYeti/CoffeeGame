@@ -188,7 +188,8 @@ public enum SoundID
     NICE,
     PAPER_BALL,
     ROLLING_CART,
-    FLAME
+    FLAME,
+    BLOCK
 }
 
 public enum MusicID

@@ -19,7 +19,8 @@ public abstract class PlayerBehaviour : MonoBehaviour
         {
             hp--;       //Loses an HP point
             EventManager.Trigger("LoseLife");
-        }
+            SoundManager.instance.PlaySound(SoundID.TAKEDAMAGE);    //Plays a sound effect
+        } else SoundManager.instance.PlaySound(SoundID.BLOCK);
     }
 
     private void Update()
@@ -32,7 +33,6 @@ public abstract class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")        //If it collides with an enemy, it takes damage.
         {
-            SoundManager.instance.PlaySound(SoundID.TAKEDAMAGE);    //Plays a sound effect
             TakeDamage();
         }
     }

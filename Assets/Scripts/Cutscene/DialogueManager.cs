@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public AnimationStyle[] animationPerSentence;
     int currentIndex = 0;
     public float characterSpeed;
+    public Image background;
+    public Text extraText;
 
     bool isSentenceOver;
     string currentSentence;
@@ -44,6 +46,9 @@ public class DialogueManager : MonoBehaviour
             currentIndex++;
             if (currentIndex >= sentences.Length)
             {
+                background.enabled = false;
+                dialogueBox.enabled = false;
+                extraText.enabled = false;
                 StartCoroutine(EndCutscene());
             } else
             {

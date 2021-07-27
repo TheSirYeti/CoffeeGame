@@ -715,7 +715,6 @@ GameObject:
   - component: {fileID: 779644806}
   - component: {fileID: 779644805}
   - component: {fileID: 779644804}
-  - component: {fileID: 779644807}
   - component: {fileID: 779644808}
   m_Layer: 0
   m_Name: Main Camera
@@ -789,18 +788,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &779644807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779644803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5353c8adaae1bf4438b599eb05dbe719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &779644808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,13 +979,18 @@ MonoBehaviour:
   - This next zone is a high-tech development zone, the're some pretty weird stuff
     going on.
   - BUT! there's some really really good coffee here. Probably the best around
+  - You should try out the brand new anti-gravity walls!
+  - According to the instruccions, it says that you should "move forward while hugging
+    the wall". Pretty neat
   - '...you know what to do'
   - boss out
-  animationPerSentence: 0200000001000000000000000400000004000000
+  animationPerSentence: 02000000010000000000000004000000040000000000000004000000
   characterSpeed: 0.01
+  background: {fileID: 1116297266}
+  extraText: {fileID: 1275900278}
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}
-  sceneToLoad: 3
+  sceneToLoad: 5
 --- !u!114 &1116297266
 MonoBehaviour:
   m_ObjectHideFlags: 0
