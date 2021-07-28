@@ -4,13 +4,49 @@ using UnityEngine;
 
 public class EnemyCrane : MonoBehaviour
 {
-    public Vector3 craneRotationValues;
+    public Vector3 craneMinRotationValues;
+    public Vector3 craneMaxRotationValues;
+
+    Vector3 craneRotation;
 
     public Transform crane;
+    public GameObject light;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        StartCoroutine(SpinCycle());
+        craneRotation = craneMinRotationValues;
+    }
+
     void FixedUpdate()
     {
-        crane.Rotate(craneRotationValues);
+        crane.Rotate(craneRotation);
+    }
+
+    IEnumerator SpinCycle()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(7f);
+            craneRotation = craneRotation * -1;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            light.SetActive(true);
+            craneRotation = craneMaxRotationValues * Mathf.Sign(craneRotation.y);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            light.SetActive(false);
+            craneRotation = craneMinRotationValues * Mathf.Sign(craneRotation.y);
+        }
     }
 }
