@@ -42,6 +42,7 @@ public class PowerUpClock : MonoBehaviour
     public void StopCounter(object[] parameters)
     {
         uiElement.enabled = false;
+        SoundManager.instance.PlaySound(SoundID.POWERUP_OVER);
         switch (powerUp)
         {
             case PowerUp.PowerType.JUMP_BOOST:

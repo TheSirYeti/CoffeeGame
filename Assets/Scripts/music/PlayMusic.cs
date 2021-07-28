@@ -9,6 +9,7 @@ public class PlayMusic : MonoBehaviour
     {
         if (!SoundManager.instance.isMusicPlaying(MusicID.MAINSONG))
         {
+            SoundManager.instance.StopAllMusic();
             SoundManager.instance.PlayMusic(MusicID.MAINSONG, true);
         }
     }

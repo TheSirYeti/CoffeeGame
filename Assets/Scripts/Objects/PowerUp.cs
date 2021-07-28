@@ -20,6 +20,7 @@ public abstract class PowerUp : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            SoundManager.instance.PlaySound(SoundID.POWERUP_START);
             Activate();
         }
     }

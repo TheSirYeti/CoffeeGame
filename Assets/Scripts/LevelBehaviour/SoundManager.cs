@@ -189,7 +189,9 @@ public enum SoundID
     PAPER_BALL,
     ROLLING_CART,
     FLAME,
-    BLOCK
+    BLOCK,
+    POWERUP_START,
+    POWERUP_OVER
 }
 
 public enum MusicID
