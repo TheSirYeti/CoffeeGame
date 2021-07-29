@@ -191,7 +191,9 @@ public enum SoundID
     FLAME,
     BLOCK,
     POWERUP_START,
-    POWERUP_OVER
+    POWERUP_OVER,
+    BUY,
+    DENIED
 }
 
 public enum MusicID
