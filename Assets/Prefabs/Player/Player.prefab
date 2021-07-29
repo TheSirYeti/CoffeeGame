@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat:
   - {fileID: 2100000, guid: 7a0ef0fece6e41244a7602e2b1e0bb10, type: 2}
-  - {fileID: 2100000, guid: b58c8616d52a2874698aeccf4c542073, type: 2}
   - {fileID: 2100000, guid: 4b1ccc7d3926bfe4eabe6f0e51e9e223, type: 2}
+  - {fileID: 2100000, guid: b58c8616d52a2874698aeccf4c542073, type: 2}
   - {fileID: 2100000, guid: ea1736cb71645e14d87a2845acac4286, type: 2}
 --- !u!1 &1753852345410388404
 GameObject:

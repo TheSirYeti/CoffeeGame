@@ -454,7 +454,7 @@ RectTransform:
   m_Children:
   - {fileID: 1628214612}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: EquipSkin
         m_Mode: 3
         m_Arguments:
@@ -3525,6 +3525,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 851229553}
   scoreText: {fileID: 737668302}
+  buyButtons:
+  - {fileID: 1137615929}
+  - {fileID: 1162510632}
+  - {fileID: 1117644633}
+  - {fileID: 1814889840}
+  equipButtons:
+  - {fileID: 1603275171}
+  - {fileID: 15251634}
+  - {fileID: 1662743842}
+  - {fileID: 1406869398}
 --- !u!114 &851229556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3731,7 +3741,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1137615927}
   - {fileID: 1603275169}
   - {fileID: 1162510630}
   - {fileID: 15251632}
@@ -3739,6 +3748,7 @@ RectTransform:
   - {fileID: 1662743840}
   - {fileID: 1814889838}
   - {fileID: 1406869396}
+  - {fileID: 1137615927}
   m_Father: {fileID: 851229554}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4283,7 +4293,7 @@ RectTransform:
   m_Children:
   - {fileID: 1438101679}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4346,7 +4356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: BuySkin
         m_Mode: 3
         m_Arguments:
@@ -4426,7 +4436,7 @@ RectTransform:
   m_Children:
   - {fileID: 258854940}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4489,7 +4499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: BuySkin
         m_Mode: 3
         m_Arguments:
@@ -4569,7 +4579,7 @@ RectTransform:
   m_Children:
   - {fileID: 1058487540}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4632,7 +4642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: BuySkin
         m_Mode: 3
         m_Arguments:
@@ -4975,7 +4985,7 @@ RectTransform:
   m_Children:
   - {fileID: 801597867}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5038,7 +5048,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: EquipSkin
         m_Mode: 3
         m_Arguments:
@@ -6353,7 +6363,7 @@ RectTransform:
   m_Children:
   - {fileID: 1569832213}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6416,7 +6426,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: EquipSkin
         m_Mode: 3
         m_Arguments:
@@ -6573,7 +6583,7 @@ RectTransform:
   m_Children:
   - {fileID: 230604724}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6636,7 +6646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: EquipSkin
         m_Mode: 3
         m_Arguments:
@@ -7291,7 +7301,7 @@ RectTransform:
   m_Children:
   - {fileID: 1684387968}
   m_Father: {fileID: 883942309}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7354,7 +7364,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1910388554}
+      - m_Target: {fileID: 851229555}
         m_MethodName: BuySkin
         m_Mode: 3
         m_Arguments:
@@ -8014,16 +8024,6 @@ MonoBehaviour:
   - 10000
   - 20000
   unlockedItems: 01000000
-  buyButtons:
-  - {fileID: 1137615929}
-  - {fileID: 1162510632}
-  - {fileID: 1117644633}
-  - {fileID: 1814889840}
-  equipButtons:
-  - {fileID: 1603275171}
-  - {fileID: 15251634}
-  - {fileID: 1662743842}
-  - {fileID: 1406869398}
 --- !u!4 &1910388555
 Transform:
   m_ObjectHideFlags: 0
@@ -9313,7 +9313,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18956
+  m_Name: pb_Mesh16360
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9605,7 +9605,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18548
+  m_Name: pb_Mesh15782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

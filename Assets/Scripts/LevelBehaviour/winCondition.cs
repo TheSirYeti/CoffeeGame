@@ -15,6 +15,7 @@ public class winCondition : MonoBehaviour
         {
             EventManager.Trigger("AddScore", 5000f);
             EventManager.Trigger("Win");
+            Destroy(gameObject);
         }
     }
 }

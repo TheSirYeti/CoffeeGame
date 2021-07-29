@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2074621802941054237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926408658502444717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96618b82d3eee44ad76d11ed268160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat:
+  - {fileID: 2100000, guid: 7a0ef0fece6e41244a7602e2b1e0bb10, type: 2}
+  - {fileID: 2100000, guid: 4b1ccc7d3926bfe4eabe6f0e51e9e223, type: 2}
+  - {fileID: 2100000, guid: b58c8616d52a2874698aeccf4c542073, type: 2}
+  - {fileID: 2100000, guid: ea1736cb71645e14d87a2845acac4286, type: 2}
 --- !u!1 &5919544736881588841
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  shield: 0
   movement: {fileID: 5919544737052869523}
   isJumping: 0
   animator: {fileID: 5919544737041523355}
@@ -368,6 +386,7 @@ MonoBehaviour:
   yDeathHeight: -10
   pausePanel: {fileID: 0}
   fpsCamera: {fileID: 0}
+  fpsCamera2: {fileID: 0}
 --- !u!114 &9158554181270640625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,10 +401,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWallRight: 0
   isWallLeft: 0
+  isWallRunning: 0
   wallLayer:
     serializedVersion: 2
     m_Bits: 512
   orientation: {fileID: 2161014658919684131}
+  wallForce: 0
+  rb: {fileID: 0}
 --- !u!1 &5919544737159512395
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +918,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 203aa1b7bed729140921c9628bf8f22a, type: 3}
+--- !u!1 &1926408658502444717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5232488858435980449, guid: 203aa1b7bed729140921c9628bf8f22a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5919544736783428108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1683438466510864662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 203aa1b7bed729140921c9628bf8f22a,
