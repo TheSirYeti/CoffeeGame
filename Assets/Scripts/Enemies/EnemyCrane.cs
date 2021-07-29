@@ -9,6 +9,9 @@ public class EnemyCrane : MonoBehaviour
 
     Vector3 craneRotation;
 
+    public bool changeOrientation;
+    public float rotationTime;
+
     public Transform crane;
     public GameObject light;
 
@@ -25,9 +28,9 @@ public class EnemyCrane : MonoBehaviour
 
     IEnumerator SpinCycle()
     {
-        while (true)
+        while (changeOrientation)
         {
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(7.25f);
             craneRotation = craneRotation * -1;
         }
     }

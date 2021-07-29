@@ -13,6 +13,7 @@ public class winCondition : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")               //If we collide with the coffee machine, we win the level
         {
+            EventManager.Trigger("AddScore", 5000f);
             EventManager.Trigger("Win");
         }
     }

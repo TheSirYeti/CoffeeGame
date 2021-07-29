@@ -423,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129843142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.07, y: -1.51, z: 5.02}
+  m_LocalPosition: {x: -3.07, y: -0.6, z: 5.02}
   m_LocalScale: {x: 1, y: 1, z: 4.3568025}
   m_Children: []
   m_Father: {fileID: 0}
@@ -975,22 +975,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1800109872}
   sentences:
-  - I'm glad that I have you on speed-dial, you know?
-  - This next zone is a high-tech development zone, the're some pretty weird stuff
-    going on.
-  - BUT! there's some really really good coffee here. Probably the best around
-  - You should try out the brand new anti-gravity walls!
-  - According to the instruccions, it says that you should "move forward while hugging
-    the wall". Pretty neat
-  - '...you know what to do'
-  - boss out
-  animationPerSentence: 02000000010000000000000004000000040000000000000004000000
+  - Heyo Kid, you're almost there!
+  - We need this coffee, it's the best one of them all!
+  - Get this for us, and you'll be done for the day.
+  - Watch out for those crazy drills though
+  - See ya!
+  animationPerSentence: 0200000004000000000000000400000004000000
   characterSpeed: 0.01
   background: {fileID: 1116297266}
   extraText: {fileID: 1275900278}
   animator: {fileID: 3166231814663592017}
   fade: {fileID: 4662888783747606072}
-  sceneToLoad: 5
+  sceneToLoad: 6
 --- !u!114 &1116297266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1928,7 +1924,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh88398
+  m_Name: pb_Mesh78054
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3056,13 +3052,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257115024238973610}
-  m_LocalRotation: {x: 1, y: 0, z: -0.0000001872535, w: 0}
-  m_LocalPosition: {x: -0, y: -0.0000031230315, z: 24}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.4, y: 0, z: 3.3}
   m_LocalScale: {x: 0.84586, y: 0.84586, z: 0.84586}
   m_Children: []
   m_Father: {fileID: 5006512735511970740}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3647292831626509982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,7 +3646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667809171256}
   m_LocalRotation: {x: -0, y: 0.524111, z: -0, w: 0.85165}
-  m_LocalPosition: {x: -1.71, y: -0.1, z: -1.25}
+  m_LocalPosition: {x: -2.626, y: 0.39999998, z: -1.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7493110728706827081}

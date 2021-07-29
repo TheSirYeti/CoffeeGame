@@ -1734,6 +1734,7 @@ GameObject:
   - component: {fileID: 951989810898780924}
   - component: {fileID: 7186661375412629382}
   - component: {fileID: 4968077263908134711}
+  - component: {fileID: 930900954163982319}
   m_Layer: 0
   m_Name: CraneWithWall
   m_TagString: Untagged
@@ -1802,8 +1803,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   craneMinRotationValues: {x: 0, y: 1, z: 0}
   craneMaxRotationValues: {x: 0, y: 1.5, z: 0}
+  changeOrientation: 0
+  rotationTime: 0
   crane: {fileID: 951989810898780924}
   light: {fileID: 8504377406446248131}
+--- !u!135 &930900954163982319
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282215609032192239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 12.954877
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1 &5151398964478202993
 GameObject:
   m_ObjectHideFlags: 0
