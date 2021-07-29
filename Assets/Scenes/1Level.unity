@@ -1672,6 +1672,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2894220545385476584, guid: c6dde6fd6ff659643ae3ee81d650746c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b58c8616d52a2874698aeccf4c542073, type: 2}
     - target: {fileID: 5363960850915629010, guid: c6dde6fd6ff659643ae3ee81d650746c,
         type: 3}
       propertyPath: pausePanel
