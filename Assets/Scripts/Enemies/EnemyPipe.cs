@@ -25,6 +25,7 @@ public class EnemyPipe : MonoBehaviour
     public void SetFalse()
     {
         Fire.SetActive(false);
+        SoundManager.instance.StopSound(SoundID.FLAME);
         Invoke("SetTrue", inactiveTime);
     }
 }

@@ -33,5 +33,6 @@ public class score : MonoBehaviour
     public void CupCollected(object[] parameters)
     {
         SetScore((float)parameters[0]);
+        UpdateText(null);
     }
 }
