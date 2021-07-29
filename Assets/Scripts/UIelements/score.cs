@@ -13,6 +13,7 @@ public class score : MonoBehaviour
     {
         EventManager.Subscribe("AddCup", UpdateText);
         EventManager.Subscribe("AddScore", CupCollected);
+        EventManager.Subscribe("Win", AddToTotal);
     }
 
     public void SetScore(float points)
@@ -34,5 +35,11 @@ public class score : MonoBehaviour
     {
         SetScore((float)parameters[0]);
         UpdateText(null);
+    }
+
+    public void AddToTotal(object[] parameters)
+    {
+        //EventManager.Trigger("AddTotalScore", totalTally);
+        TotalScore.instance.AddScore(totalTally);
     }
 }
