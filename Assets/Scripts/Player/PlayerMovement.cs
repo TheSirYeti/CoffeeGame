@@ -40,7 +40,7 @@ namespace Player.Movement
             EventManager.Subscribe("SpeedBoost", SpeedBoost);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             _controller.OnUpdate();
 

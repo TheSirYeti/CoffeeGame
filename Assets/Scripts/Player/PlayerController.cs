@@ -81,12 +81,14 @@ namespace Player.Controller
                 movement.fpsCamera.GetComponent<CameraLook>().enabled = false;
                 movement.fpsCamera2.GetComponent<CameraLook>().enabled = false;
                 artificialUpdate = PausedMenu;
+                Debug.Log("CAMBIO");
                 Time.timeScale = 0f;
             }
         }
 
         void PausedMenu()
         {
+            Debug.Log("GOL");
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Cursor.visible = false;
