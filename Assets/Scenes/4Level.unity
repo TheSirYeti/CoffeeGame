@@ -3152,7 +3152,7 @@ PrefabInstance:
     - target: {fileID: 120938746012323383, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_Text
-      value: return
+      value: yes
       objectReference: {fileID: 0}
     - target: {fileID: 120938746192268971, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -3192,7 +3192,7 @@ PrefabInstance:
     - target: {fileID: 120938746192268972, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.1
+      value: 5.4
       objectReference: {fileID: 0}
     - target: {fileID: 120938746480829888, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -3327,7 +3327,9 @@ PrefabInstance:
     - target: {fileID: 120938747701268973, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_Text
-      value: YOU GOT ALL THE COFFEE!
+      value: 'YOU GOT THE COFFEE!
+
+        CONTINUE?'
       objectReference: {fileID: 0}
     - target: {fileID: 120938747720504005, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
@@ -3357,7 +3359,7 @@ PrefabInstance:
     - target: {fileID: 120938747826102551, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 841399992787594950, guid: 4e67de5d2d242ea40acd13d56b3686b2,
         type: 3}
