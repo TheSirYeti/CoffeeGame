@@ -40,7 +40,7 @@ namespace Player.Movement
             EventManager.Subscribe("SpeedBoost", SpeedBoost);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             _controller.OnUpdate();
 
@@ -57,8 +57,8 @@ namespace Player.Movement
             {
                 Vector3 totalMovement = transform.forward * forwardMovement + transform.right * horizontalMovement; //gets the correct orientation
                 animator.SetFloat(runningSpeedParameterName, 0.5f); //Sets the blend tree's value
-                playerBody.MovePosition(transform.position + totalMovement * finalSpeed * Time.deltaTime * speedMultiplier);
-                //transform.position += totalMovement * finalSpeed * Time.deltaTime; //moves the player
+                playerBody.MovePosition(transform.position + totalMovement * finalSpeed * Time.fixedDeltaTime * speedMultiplier);
+                
             }
             else animator.SetFloat(runningSpeedParameterName, 0.2f);    //Sets the blend tree's value
         }
