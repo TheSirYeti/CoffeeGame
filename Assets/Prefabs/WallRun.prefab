@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8860349961369858787}
   - component: {fileID: 8860349961369858786}
   - component: {fileID: 8860349961369858785}
-  - component: {fileID: 8860349961369858784}
+  - component: {fileID: 6444073461786445457}
   m_Layer: 9
   m_Name: WallRun
   m_TagString: Untagged
@@ -304,8 +304,8 @@ MonoBehaviour:
   - a: 3
     b: 2
   m_SelectedVertices: 00000000010000000200000003000000
---- !u!64 &8860349961369858784
-MeshCollider:
+--- !u!65 &6444073461786445457
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -314,10 +314,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 6.6071377, y: 5, z: 13.053674}
+  m_Center: {x: 3.3035688, y: 2.5, z: -6.4009814}
 --- !u!1 &8860349961719379900
 GameObject:
   m_ObjectHideFlags: 0
