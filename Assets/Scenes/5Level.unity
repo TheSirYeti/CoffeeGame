@@ -2590,7 +2590,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17056
+  m_Name: pb_Mesh42626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8421,8 +8421,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.098547, y: 5, z: 6.113812}
-  m_Center: {x: -4.0492735, y: 2.5, z: -3.0569055}
+  m_Size: {x: 10.098547, y: 12.21151, z: 6.1138115}
+  m_Center: {x: -4.0492735, y: 6.105755, z: -3.0569057}
 --- !u!114 &1506387262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9734,8 +9734,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.098547, y: 5, z: 6.113812}
-  m_Center: {x: -4.0492735, y: 2.5, z: -3.0569055}
+  m_Size: {x: 10.098547, y: 11.580734, z: 6.1138115}
+  m_Center: {x: -4.0492735, y: 5.790367, z: -3.0569057}
 --- !u!114 &1691745883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10406,8 +10406,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.098547, y: 5, z: 6.113812}
-  m_Center: {x: -4.0492735, y: 2.5, z: -3.0569055}
+  m_Size: {x: 10.098547, y: 12.880283, z: 6.1138115}
+  m_Center: {x: -4.0492735, y: 6.4401417, z: -3.0569057}
 --- !u!114 &1743473139
 MonoBehaviour:
   m_ObjectHideFlags: 0
