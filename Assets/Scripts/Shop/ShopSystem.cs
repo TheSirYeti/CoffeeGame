@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//TP Final - Juan Pablo Rshaid
 public class ShopSystem : MonoBehaviour
 {
     public List<float> items;

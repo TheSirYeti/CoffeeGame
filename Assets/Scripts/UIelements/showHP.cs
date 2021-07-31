@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Player.Controller;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 public class showHP : MonoBehaviour
 {
     public PlayerController player;

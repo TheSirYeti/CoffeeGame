@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player.Controller;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 public class CollectCups : MonoBehaviour
 {
     public CoffeeCup cup;

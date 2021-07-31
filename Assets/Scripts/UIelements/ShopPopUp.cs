@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//TP Final - Juan Pablo Rshaid
 public class ShopPopUp : MonoBehaviour
 {
     public GameObject panel;

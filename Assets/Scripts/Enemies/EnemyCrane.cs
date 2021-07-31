@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP Final - Juan Pablo Rshaid | Juan Cruz Cristófalo
+
 public class EnemyCrane : MonoBehaviour
 {
     public Vector3 craneMinRotationValues;

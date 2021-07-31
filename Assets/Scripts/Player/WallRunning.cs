@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player.Movement;
 
+//TP Final - Juan Pablo Rshaid
 public class WallRunning : MonoBehaviour
 {
     public bool isWallRight;
@@ -24,17 +25,8 @@ public class WallRunning : MonoBehaviour
         isWallRight = Physics.Raycast(transform.position, orientation.right, 3f, wallLayer);
         isWallLeft = Physics.Raycast(transform.position, -orientation.right, 3f, wallLayer);
 
-        if (Input.GetKeyDown(KeyCode.D) && isWallRight) StartWallRun();
-        if (Input.GetKeyDown(KeyCode.A) && isWallLeft) StartWallRun();
-
-        if (isWallRunning)
-        {
-            if (isWallRight)
-            {
-                rb.AddForce(orientation.right * (wallForce / 5) * Time.deltaTime);
-            } else rb.AddForce(-orientation.right * (wallForce / 5) * Time.deltaTime);
-        }
-
+        if (Input.GetKey(KeyCode.D) && isWallRight) StartWallRun();
+        if (Input.GetKey(KeyCode.A) && isWallLeft) StartWallRun();
 
         if (!isWallRight && !isWallLeft)
         {
@@ -44,15 +36,17 @@ public class WallRunning : MonoBehaviour
 
     void StartWallRun()
     {
-        //GetComponent<PlayerMovement>().enabled = false;
+        if (!isWallRunning)
+        {
+            SoundManager.instance.PlaySound(SoundID.WALLRUN);
+        }
         rb.useGravity = false;
         isWallRunning = true;
-        rb.AddForce(orientation.forward * wallForce * Time.deltaTime);
     }
 
     void StopWallRun()
     {
-        //GetComponent<PlayerMovement>().enabled = true;
+        SoundManager.instance.StopSound(SoundID.WALLRUN);
         rb.useGravity = true;
         isWallRunning = false;
     }

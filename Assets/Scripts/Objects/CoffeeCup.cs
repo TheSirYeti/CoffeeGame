@@ -4,7 +4,7 @@ public struct CoffeeCup
     public float scoreValue;
     public float multiplier;
 
-    //TP2 - Rshaid, Juan Pablo
+    //TP Final - Juan Pablo Rshaid
     public CoffeeCup(float value, float multiple)
     {
         scoreValue = value;

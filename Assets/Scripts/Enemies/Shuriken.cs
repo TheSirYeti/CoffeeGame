@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP Final - Juan Pablo Rshaid
+
 public class Shuriken : MonoBehaviour
 {
     Vector3 original;

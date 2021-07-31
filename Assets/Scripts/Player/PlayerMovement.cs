@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Player.Controller;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 
 namespace Player.Movement
 {
@@ -71,6 +71,13 @@ namespace Player.Movement
                 playerBody.AddForce(Vector3.up * jumpForce, jumpForceMode);     //Adds a upward force which makes it jump
                 SoundManager.instance.PlaySound(SoundID.JUMP);  //Plays a sound effect
             }
+        }
+
+        public void JetPackJump()
+        {
+            playerBody.velocity = Vector3.zero;
+            playerBody.AddForce(Vector3.up * (jumpForce * 2), jumpForceMode);
+            SoundManager.instance.PlaySound(SoundID.FLAME);
         }
 
         public void Run()

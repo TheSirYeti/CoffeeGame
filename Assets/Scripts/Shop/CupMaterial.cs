@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TP Final - Juan Pablo Rshaid
 public class CupMaterial : MonoBehaviour
 {
     public Material[] mat;

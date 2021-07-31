@@ -6,7 +6,7 @@ using System;
 using Player.Movement;
 using Camera.Behaviour;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 
 namespace Player.Controller
 {
@@ -18,6 +18,8 @@ namespace Player.Controller
         public      bool                isJumping;
         public      Animator            animator;
         public      Action              artificialUpdate;
+
+        bool jetPackUsed = false;
 
         private void Awake()
         {
@@ -71,7 +73,6 @@ namespace Player.Controller
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
                 SoundManager.instance.PauseAllMusic();
@@ -81,14 +82,19 @@ namespace Player.Controller
                 movement.fpsCamera.GetComponent<CameraLook>().enabled = false;
                 movement.fpsCamera2.GetComponent<CameraLook>().enabled = false;
                 artificialUpdate = PausedMenu;
-                Debug.Log("CAMBIO");
                 Time.timeScale = 0f;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F) && !jetPackUsed)
+            {
+                jetPackUsed = true;
+                movement.JetPackJump();
+                EventManager.Trigger("HideJetPackUI");
             }
         }
 
         void PausedMenu()
         {
-            Debug.Log("GOL");
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Cursor.visible = false;

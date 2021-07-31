@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 public class timeRemaining : MonoBehaviour
 {
     [SerializeField]private float levelTime;

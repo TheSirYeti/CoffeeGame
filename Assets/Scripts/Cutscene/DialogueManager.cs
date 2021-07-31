@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//TP Final - Juan Pablo Rshaid
+
 public class DialogueManager : MonoBehaviour
 {
     public Text dialogueBox;

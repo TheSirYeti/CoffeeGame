@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//TP2 - Rshaid, Juan Pablo
+//TP Final - Juan Pablo Rshaid
 public class CrissCross : MonoBehaviour
 {
     public Vector3 barsRotationValues;

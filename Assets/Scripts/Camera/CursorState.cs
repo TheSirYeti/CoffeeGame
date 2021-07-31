@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//TP2 - Juan Cruz Cristófalo
+//TP Final - Juan Cruz Cristófalo
 public class CursorState : MonoBehaviour
 {
     void Start()
